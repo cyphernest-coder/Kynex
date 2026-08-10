@@ -1,151 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Kynex | Cybersecurity</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #080b12;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            border-bottom: 1px solid #1c2330;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #00ff9d;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 25px;
-        }
-
-        nav a:hover {
-            color: #00ff9d;
-        }
-
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .hero h1 {
-            font-size: 60px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #00ff9d;
-        }
-
-        .hero p {
-            max-width: 650px;
-            color: #aeb7c6;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 13px 25px;
-            background: #00ff9d;
-            color: #080b12;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-        }
-
-        .button:hover {
-            background: #00d982;
-        }
-
-        .services {
-            padding: 70px 8%;
-            text-align: center;
-        }
-
-        .services h2 {
-            font-size: 35px;
-            margin-bottom: 40px;
-        }
-
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            background: #10151f;
-            border: 1px solid #202938;
-            border-radius: 10px;
-            padding: 30px;
-            width: 280px;
-            text-align: left;
-        }
-
-        .card h3 {
-            color: #00ff9d;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #aeb7c6;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid #1c2330;
-            color: #778296;
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            nav a {
-                margin-left: 10px;
-            }
-        }
-   .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-} </style>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G6QWWH000"></script>
 <script>
@@ -155,76 +10,838 @@
 
   gtag('config', 'G-1G6QWWH000');
 </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kynex — Indian Cybersecurity</title>
+
+    <meta name="description" content="Kynex is an India-focused cybersecurity initiative built to promote digital security, cyber awareness, and safer technology for everyone.">
+    <meta name="keywords" content="Kynex, cybersecurity India, cyber security, digital security, cyber awareness, India cybersecurity">
+    <meta name="author" content="Kynex">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #05070b;
+            color: #f5f7fa;
+            overflow-x: hidden;
+        }
+
+        /* ---------- BACKGROUND ---------- */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(0, 255, 170, 0.10), transparent 30%),
+                radial-gradient(circle at 85% 25%, rgba(0, 140, 255, 0.12), transparent 30%),
+                radial-gradient(circle at 50% 90%, rgba(120, 0, 255, 0.08), transparent 30%);
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.08;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        /* ---------- NAVBAR ---------- */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 7%;
+
+            background: rgba(5, 7, 11, 0.70);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #00ffb0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #aeb7c5;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ffb0;
+        }
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 130px 20px 80px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 9px 16px;
+            border-radius: 100px;
+            border: 1px solid rgba(0,255,176,0.3);
+            background: rgba(0,255,176,0.06);
+            color: #00ffb0;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 92px);
+            line-height: 0.95;
+            letter-spacing: -5px;
+            margin-bottom: 30px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #00ffb0,
+                #55aaff
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: auto;
+            color: #9ba6b5;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 23px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #00ffb0;
+            color: #03100b;
+            box-shadow: 0 0 30px rgba(0,255,176,0.15);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 40px rgba(0,255,176,0.35);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.13);
+            color: white;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .btn-secondary:hover {
+            border-color: #00ffb0;
+            transform: translateY(-3px);
+        }
+
+        /* ---------- GENERAL ---------- */
+
+        section {
+            padding: 110px 7%;
+        }
+
+        .section-heading {
+            max-width: 750px;
+            margin-bottom: 55px;
+        }
+
+        .section-heading .small {
+            color: #00ffb0;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(34px, 5vw, 58px);
+            letter-spacing: -2px;
+            margin-bottom: 18px;
+        }
+
+        .section-heading p {
+            color: #8f9baa;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* ---------- CARDS ---------- */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 22px;
+
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,0.06),
+                rgba(255,255,255,0.025)
+            );
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            transition: 0.35s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0,255,176,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+            background: rgba(0,255,176,0.08);
+            border: 1px solid rgba(0,255,176,0.15);
+
+            font-size: 22px;
+            margin-bottom: 22px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #8f9baa;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* ---------- INDIA SECTION ---------- */
+
+        .india-section {
+            position: relative;
+        }
+
+        .india-box {
+            padding: 55px;
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,255,176,0.08),
+                    rgba(0,130,255,0.05)
+                );
+
+            border: 1px solid rgba(0,255,176,0.16);
+        }
+
+        .india-box h2 {
+            font-size: clamp(35px, 5vw, 62px);
+            letter-spacing: -3px;
+            margin-bottom: 22px;
+        }
+
+        .india-box p {
+            max-width: 850px;
+            color: #a2adbb;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .india-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .tag {
+            padding: 9px 13px;
+            border-radius: 100px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: #cbd3dd;
+            font-size: 13px;
+        }
+
+        /* ---------- STATS ---------- */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 35px 20px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 42px;
+            color: #00ffb0;
+            margin-bottom: 8px;
+        }
+
+        .stat span {
+            color: #8994a3;
+            font-size: 14px;
+        }
+
+        /* ---------- CONTACT ---------- */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 850px;
+            margin: auto;
+            padding: 65px 30px;
+
+            border-radius: 30px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(0,255,176,0.10),
+                    rgba(255,255,255,0.025) 55%
+                );
+
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .contact-box h2 {
+            font-size: clamp(38px, 6vw, 65px);
+            letter-spacing: -3px;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            color: #929dab;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+
+        .email {
+            display: inline-block;
+            color: #00ffb0;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 28px;
+            word-break: break-word;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            padding: 35px 7%;
+            border-top: 1px solid rgba(255,255,255,0.07);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        footer p {
+            color: #66717f;
+            font-size: 13px;
+        }
+
+        .footer-logo {
+            font-weight: 900;
+        }
+
+        .footer-logo span {
+            color: #00ffb0;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .cards,
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .india-box {
+                padding: 35px 25px;
+            }
+
+            section {
+                padding: 80px 6%;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ---------- ANIMATION ---------- */
+
+        @keyframes floatGlow {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .badge {
+            animation: floatGlow 4s ease-in-out infinite;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-    <div class="brand">
-        <img src="kynex-logo.png" alt="Kynex Logo" class="logo">
-        <span>Kynex</span>
-    </div>
-</header>
+    <!-- NAVIGATION -->
 
-    <section class="hero" id="home">
-        <h1>Secure the <span>Digital World.</span></h1>
+    <nav>
+        <div class="logo">
+            Kyn<span>ex</span>
+        </div>
 
-        <p>
-            Kynex is a cybersecurity initiative focused on
-            helping individuals and organizations understand,
-            identify, and defend against cyber threats.
-        </p>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Security</a></li>
+            <li><a href="#india">India</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <a href="#services" class="button">Explore Kynex</a>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🇮🇳 INDIA-FOCUSED CYBERSECURITY
+            </div>
+
+            <h1>
+                Security for the
+                <span class="gradient-text">digital India.</span>
+            </h1>
+
+            <p>
+                Kynex is an India-focused cybersecurity initiative built around
+                cyber awareness, digital safety, and a stronger security mindset
+                for the next generation of technology users.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#services" class="btn btn-primary">
+                    Explore Security →
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Kynex
+                </a>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <section class="services" id="services">
 
-        <h2>What We Do</h2>
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="section-heading">
+
+            <div class="small">
+                / WHO WE ARE
+            </div>
+
+            <h2>
+                Cybersecurity shouldn't feel complicated.
+            </h2>
+
+            <p>
+                Kynex focuses on making cybersecurity easier to understand,
+                easier to approach, and more relevant to everyday digital life.
+            </p>
+
+        </div>
 
         <div class="cards">
 
             <div class="card">
-                <h3>Threat Awareness</h3>
+
+                <div class="icon">🛡️</div>
+
+                <h3>
+                    Security First
+                </h3>
+
                 <p>
-                    Learn about common cyber threats and how attackers
-                    attempt to exploit digital systems.
+                    We promote a security-first mindset where privacy,
+                    awareness, and responsible technology use come before
+                    convenience.
                 </p>
+
             </div>
 
-            <div class="card">
-                <h3>Security Education</h3>
-                <p>
-                    Simple cybersecurity knowledge designed to help
-                    people make safer decisions online.
-                </p>
-            </div>
 
             <div class="card">
-                <h3>Cyber Research</h3>
+
+                <div class="icon">🧠</div>
+
+                <h3>
+                    Cyber Awareness
+                </h3>
+
                 <p>
-                    Explore emerging cybersecurity trends,
-                    vulnerabilities, and defensive technologies.
+                    Understanding threats is one of the strongest defenses.
+                    Kynex aims to make cybersecurity concepts understandable
+                    for students, creators, businesses, and everyday users.
                 </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">⚡</div>
+
+                <h3>
+                    Future Ready
+                </h3>
+
+                <p>
+                    Technology changes quickly. Kynex focuses on developing
+                    security awareness that can evolve with the digital world.
+                </p>
+
             </div>
 
         </div>
-    </section>
-
-    <section class="services" id="about">
-
-        <h2>About Kynex</h2>
-
-        <p style="max-width: 700px; margin: auto; color: #aeb7c6;">
-            Kynex aims to make cybersecurity easier to understand
-            and more accessible. We focus on awareness, education,
-            and responsible security research.
-        </p>
 
     </section>
+
+
+    <!-- SECURITY -->
+
+    <section id="services">
+
+        <div class="section-heading">
+
+            <div class="small">
+                / SECURITY
+            </div>
+
+            <h2>
+                Think ahead of the threat.
+            </h2>
+
+            <p>
+                Cybersecurity is more than reacting to attacks. It's about
+                understanding risk, recognizing suspicious behavior, and
+                building safer digital habits.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">🔐</div>
+
+                <h3>
+                    Digital Security
+                </h3>
+
+                <p>
+                    Learn the fundamentals of protecting accounts, devices,
+                    personal information, and digital identities.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🚨</div>
+
+                <h3>
+                    Threat Awareness
+                </h3>
+
+                <p>
+                    Understand common cyber risks such as phishing,
+                    credential theft, scams, malicious links, and social
+                    engineering.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🌐</div>
+
+                <h3>
+                    Safer Internet
+                </h3>
+
+                <p>
+                    Encourage responsible and informed participation in the
+                    rapidly expanding digital ecosystem.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INDIA -->
+
+    <section id="india" class="india-section">
+
+        <div class="india-box">
+
+            <div class="section-heading">
+
+                <div class="small">
+                    / BUILT WITH INDIA IN MIND
+                </div>
+
+                <h2>
+                    Cybersecurity for a billion+ digital journeys.
+                </h2>
+
+            </div>
+
+            <p>
+                India is experiencing one of the world's fastest-growing
+                digital transformations. From digital payments and online
+                education to businesses, creators, cloud platforms, and
+                connected devices, more of everyday life is moving online.
+                Kynex is built with this environment in mind — an
+                India-focused cybersecurity initiative that aims to encourage
+                stronger cyber awareness, responsible technology use, and
+                practical digital security habits. Our goal is simple:
+                help build a generation that doesn't just use technology,
+                but understands how to use it safely.
+            </p>
+
+            <div class="india-tags">
+
+                <div class="tag">🇮🇳 India</div>
+                <div class="tag">Cyber Awareness</div>
+                <div class="tag">Digital Safety</div>
+                <div class="tag">Privacy</div>
+                <div class="tag">Technology</div>
+                <div class="tag">Security Mindset</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MISSION -->
+
+    <section>
+
+        <div class="section-heading">
+
+            <div class="small">
+                / THE MISSION
+            </div>
+
+            <h2>
+                Make security part of the culture.
+            </h2>
+
+            <p>
+                Kynex is working toward a future where cybersecurity isn't
+                something people think about only after something goes wrong.
+            </p>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>01</strong>
+                <span>Awareness</span>
+            </div>
+
+            <div class="stat">
+                <strong>02</strong>
+                <span>Education</span>
+            </div>
+
+            <div class="stat">
+                <strong>03</strong>
+                <span>Innovation</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <div class="contact-box">
+
+            <div class="small">
+                / CONTACT
+            </div>
+
+            <h2>
+                Let's connect.
+            </h2>
+
+            <p>
+                Have an idea, question, collaboration proposal, or simply
+                want to talk cybersecurity? Reach out to Kynex.
+            </p>
+
+            <a
+                class="email"
+                href="mailto:professionalworkfor249@gmail.com"
+            >
+                professionalworkfor249@gmail.com
+            </a>
+
+            <br>
+
+            <a
+                href="mailto:professionalworkfor249@gmail.com"
+                class="btn btn-primary"
+            >
+                Email Kynex →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
 
     <footer>
-        © 2026 Kynex. All rights reserved.
+
+        <div class="footer-logo">
+            Kyn<span>ex</span>
+        </div>
+
+        <p>
+            © 2026 Kynex. Building a more security-aware digital India.
+        </p>
+
     </footer>
 
 </body>
