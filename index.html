@@ -4,27 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Password Strength Checker — Free, Private &amp; Instant | Kynex</title>
-<meta name="description" content="Free password strength checker by Kynex. Test password strength instantly in your browser. Check length, character variety and predictable patterns. Your password stays on your device.">
-<meta name="keywords" content="password strength checker, password checker, check password strength, strong password checker, password security, password strength test, Kynex">
+<title>Kynex — Free Cybersecurity Tools & Resources</title>
+<meta name="description" content="Kynex provides free, privacy-focused cybersecurity tools including a Password Strength Checker and Password Generator. More security tools coming soon.">
+<meta name="keywords" content="Kynex, cybersecurity tools, free cybersecurity tools, password strength checker, password generator, cyber security">
 <meta name="author" content="Kynex">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://YOUR-DOMAIN.example/password-strength-checker/">
+<link rel="canonical" href="https://cyphernest-coder.github.io/Kynex/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Password Strength Checker — Free &amp; Private | Kynex">
-<meta property="og:description" content="Check password strength instantly in your browser. Private client-side analysis by Kynex.">
-<meta property="og:url" content="https://YOUR-DOMAIN.example/password-strength-checker/">
+<meta property="og:title" content="Kynex — Free Cybersecurity Tools">
+<meta property="og:description" content="Free, privacy-focused cybersecurity tools built to make digital security easier.">
+<meta property="og:url" content="https://cyphernest-coder.github.io/Kynex/">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#05070b;
-    color:#f5f7fa;
-    line-height:1.6;
-    overflow-x:hidden
+    background:#05070b;color:#f5f7fa;line-height:1.6;overflow-x:hidden
 }
 body:before{
     content:"";position:fixed;inset:0;z-index:-2;
@@ -43,10 +40,8 @@ body:after{
 nav{
     position:sticky;top:0;z-index:1000;
     display:flex;justify-content:space-between;align-items:center;
-    padding:18px 7%;
-    background:rgba(5,7,11,.78);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.06)
+    padding:18px 7%;background:rgba(5,7,11,.78);
+    backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)
 }
 .logo{font-size:25px;font-weight:900;letter-spacing:-1px}
 .logo span{color:#00ffb0}
@@ -55,123 +50,108 @@ nav{
 .nav-links a:hover{color:#00ffb0}
 
 main{max-width:1180px;margin:auto}
-.hero{
-    text-align:center;padding:85px 20px 40px
-}
+.hero{text-align:center;padding:105px 20px 75px}
 .badge{
     display:inline-block;padding:8px 14px;border-radius:100px;
-    border:1px solid rgba(0,255,176,.28);
-    background:rgba(0,255,176,.06);
-    color:#00ffb0;font-size:12px;font-weight:800;
-    letter-spacing:1.2px;margin-bottom:20px
+    border:1px solid rgba(0,255,176,.28);background:rgba(0,255,176,.06);
+    color:#00ffb0;font-size:12px;font-weight:800;letter-spacing:1.2px;margin-bottom:20px
 }
 h1{
-    font-size:clamp(45px,7vw,78px);
-    line-height:.98;letter-spacing:-4px;margin-bottom:22px
+    font-size:clamp(48px,8vw,86px);line-height:.98;
+    letter-spacing:-4px;margin-bottom:24px
 }
 .gradient{
     background:linear-gradient(90deg,#fff,#00ffb0,#55aaff);
     -webkit-background-clip:text;background-clip:text;color:transparent
 }
-.hero p{max-width:720px;margin:auto;color:#9ba6b5;font-size:17px}
-.tool-section{padding:30px 20px 80px}
-.tool-card{
-    max-width:900px;margin:auto;padding:38px;
-    border-radius:30px;
-    background:
-      radial-gradient(circle at 10% 0%,rgba(0,255,176,.10),transparent 35%),
-      linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
-    border:1px solid rgba(0,255,176,.17);
-    box-shadow:0 25px 80px rgba(0,0,0,.28)
+.hero p{max-width:720px;margin:auto;color:#9ba6b5;font-size:18px}
+.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-height:48px;padding:0 22px;border-radius:12px;text-decoration:none;
+    font-weight:900;font-size:14px;transition:.2s
 }
-.tool-title{text-align:center;margin-bottom:28px}
-.tool-title h2{font-size:30px;margin-bottom:8px}
-.tool-title p{color:#8995a3;font-size:14px}
-.input-wrap{
-    display:flex;gap:8px;padding:7px;border-radius:16px;
-    background:rgba(0,0,0,.28);
-    border:1px solid rgba(255,255,255,.09)
+.btn-primary{background:#00ffb0;color:#03100b}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 35px rgba(0,255,176,.18)}
+.btn-secondary{
+    color:#dce3eb;border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.04)
 }
-#passwordInput{
-    flex:1;min-width:0;border:0;outline:0;background:transparent;
-    color:#fff;padding:15px;font-size:17px;font-family:inherit
-}
-#passwordInput::placeholder{color:#65707e}
-.action-btn,.clear-btn{
-    border:1px solid rgba(255,255,255,.1);
-    background:rgba(255,255,255,.05);
-    color:#dce3eb;border-radius:11px;
-    padding:0 17px;font-weight:800;cursor:pointer
-}
-.action-btn:hover,.clear-btn:hover{border-color:#00ffb0;color:#00ffb0}
-.strength{margin-top:26px}
-.strength-top{display:flex;justify-content:space-between;margin-bottom:9px;color:#aeb7c5}
-#strengthText{font-weight:900}
-.meter{height:11px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
-#strengthBar{
-    height:100%;width:0;border-radius:inherit;
-    background:#5d6875;transition:width .35s,background .35s,box-shadow .35s
-}
-.checks{
-    display:grid;grid-template-columns:repeat(2,1fr);
-    gap:10px;margin-top:25px
-}
-.check{
-    display:flex;align-items:center;gap:10px;padding:12px;
-    border-radius:12px;background:rgba(255,255,255,.035);
-    border:1px solid rgba(255,255,255,.07);
-    color:#7f8996;font-size:14px
-}
-.check-icon{
-    width:23px;height:23px;flex:0 0 23px;
-    display:grid;place-items:center;border-radius:50%;
-    border:1px solid rgba(255,255,255,.16)
-}
-.check.pass{
-    color:#dce5df;border-color:rgba(0,255,176,.18);
-    background:rgba(0,255,176,.045)
-}
-.check.pass .check-icon{color:#00ffb0;border-color:#00ffb0}
-.recommend{
-    margin-top:20px;padding:19px;border-radius:15px;
-    background:rgba(255,255,255,.035);
-    border:1px solid rgba(255,255,255,.07)
-}
-.recommend h3{font-size:16px;margin-bottom:8px}
-#recommendations{padding-left:20px;color:#9ba6b5;font-size:14px}
-.privacy{
-    display:flex;gap:10px;margin-top:18px;padding:15px;
-    border-radius:13px;background:rgba(0,255,176,.045);
-    border:1px solid rgba(0,255,176,.1)
-}
-.privacy p{color:#8995a3;font-size:13px}
-.clear-btn{min-height:43px;margin-top:17px}
-.note{margin-top:16px;color:#687482;font-size:12px}
+.btn-secondary:hover{border-color:#00ffb0;color:#00ffb0}
 
-.content{padding:70px 20px}
-.content-inner{max-width:900px;margin:auto}
-.section-label{color:#00ffb0;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
-h2{font-size:clamp(32px,5vw,50px);letter-spacing:-2px;margin-bottom:18px}
-.content p{color:#9ba6b5;margin-bottom:18px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-.card{
-    padding:24px;border-radius:18px;background:rgba(255,255,255,.035);
+.section{padding:75px 20px}
+.section-inner{max-width:1080px;margin:auto}
+.section-label{
+    color:#00ffb0;font-size:12px;font-weight:800;letter-spacing:2px;
+    text-transform:uppercase;margin-bottom:12px
+}
+h2{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;margin-bottom:14px}
+.section-intro{color:#9ba6b5;max-width:700px;margin-bottom:35px}
+
+.tools-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:18px
+}
+.tool-card{
+    position:relative;padding:28px;border-radius:22px;
+    background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+    border:1px solid rgba(255,255,255,.08);
+    transition:.2s;overflow:hidden
+}
+.tool-card:before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 90% 0%,rgba(0,255,176,.08),transparent 35%);
+    pointer-events:none
+}
+.tool-card:hover{transform:translateY(-3px);border-color:rgba(0,255,176,.25)}
+.tool-icon{font-size:31px;margin-bottom:15px}
+.tool-card h3{font-size:22px;margin-bottom:8px}
+.tool-card p{color:#929eac;font-size:14px;min-height:68px}
+.status{
+    display:inline-flex;margin:18px 0 17px;padding:6px 10px;border-radius:999px;
+    font-size:11px;font-weight:900;letter-spacing:.7px
+}
+.available{color:#00ffb0;background:rgba(0,255,176,.07);border:1px solid rgba(0,255,176,.18)}
+.soon{color:#8fb8ff;background:rgba(85,170,255,.07);border:1px solid rgba(85,170,255,.18)}
+.tool-btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-height:42px;padding:0 16px;border-radius:10px;text-decoration:none;
+    font-size:13px;font-weight:900;border:1px solid rgba(0,255,176,.22);
+    color:#00ffb0;background:rgba(0,255,176,.05)
+}
+.tool-btn:hover{background:rgba(0,255,176,.1)}
+.tool-btn.disabled{color:#6f7b89;border-color:rgba(255,255,255,.07);cursor:not-allowed}
+
+.features{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px
+}
+.feature{
+    padding:23px;border-radius:17px;background:rgba(255,255,255,.035);
     border:1px solid rgba(255,255,255,.07)
 }
-.card h3{font-size:18px;margin-bottom:8px}
-.card p{font-size:14px;margin:0}
+.feature h3{font-size:17px;margin-bottom:7px}
+.feature p{font-size:13px;color:#8995a3}
+
+.about-box{
+    padding:32px;border-radius:23px;
+    background:linear-gradient(145deg,rgba(0,255,176,.06),rgba(255,255,255,.025));
+    border:1px solid rgba(0,255,176,.12)
+}
+.about-box p{color:#9ba6b5;margin-bottom:15px}
+.about-box p:last-child{margin-bottom:0}
+
 footer{
     padding:30px 7%;border-top:1px solid rgba(255,255,255,.07);
     display:flex;justify-content:space-between;gap:20px
 }
 footer p{color:#687482;font-size:13px}
+
 @media(max-width:700px){
     .nav-links{display:none}
-    .hero{padding-top:60px}
-    .tool-card{padding:24px 18px}
-    .input-wrap{flex-direction:column}
-    .action-btn{min-height:44px}
-    .checks,.cards{grid-template-columns:1fr}
+    .hero{padding:70px 20px 55px}
+    .hero-actions{flex-direction:column}
+    .btn{width:100%}
+    .tools-grid,.features{grid-template-columns:1fr}
+    .tool-card{padding:23px}
     footer{flex-direction:column;text-align:center}
 }
 </style>
@@ -181,286 +161,157 @@ footer p{color:#687482;font-size:13px}
 <nav>
     <div class="logo">Kyn<span>ex</span></div>
     <ul class="nav-links">
-        <li><a href="#checker">Password Checker</a></li>
-        <li><a href="#how">How It Works</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#about">About Kynex</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#about">About</a></li>
     </ul>
 </nav>
 
 <main>
+
 <section class="hero">
-    <div class="badge">🔐 FREE PASSWORD SECURITY TOOL</div>
-    <h1>Free <span class="gradient">Password Strength Checker</span></h1>
+    <div class="badge">🛡️ FREE CYBERSECURITY TOOLS</div>
+    <h1>Security tools.<br><span class="gradient">Made simpler.</span></h1>
     <p>
-        Check how strong a password is instantly. Kynex analyzes it locally
-        in your browser for length, character variety, and predictable patterns.
+        Kynex is building a collection of free, practical cybersecurity tools
+        designed to make everyday digital security easier to understand and use.
     </p>
+    <div class="hero-actions">
+        <a class="btn btn-primary" href="#tools">Explore Tools</a>
+        <a class="btn btn-secondary" href="#about">About Kynex</a>
+    </div>
 </section>
 
-<section class="tool-section" id="checker">
-<div class="tool-card">
-    <div class="tool-title">
-        <h2>Check Your Password Strength</h2>
-        <p>Your password is analyzed locally and is not sent to Kynex or an external service.</p>
-    </div>
-
-    <div class="input-wrap">
-        <input id="passwordInput" type="password"
-               placeholder="Enter a password to test"
-               autocomplete="new-password"
-               spellcheck="false"
-               aria-label="Password to test">
-        <button class="action-btn" id="togglePassword" type="button">Show</button>
-    </div>
-
-    <div class="strength">
-        <div class="strength-top">
-            <span>Strength</span>
-            <strong id="strengthText">Not tested</strong>
-        </div>
-        <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-            <div id="strengthBar"></div>
-        </div>
-    </div>
-
-    <div class="checks">
-        <div class="check" id="lengthCheck"><span class="check-icon">○</span>At least 12 characters</div>
-        <div class="check" id="uppercaseCheck"><span class="check-icon">○</span>Uppercase letter</div>
-        <div class="check" id="lowercaseCheck"><span class="check-icon">○</span>Lowercase letter</div>
-        <div class="check" id="numberCheck"><span class="check-icon">○</span>Number</div>
-        <div class="check" id="specialCheck"><span class="check-icon">○</span>Special character</div>
-        <div class="check" id="patternCheck"><span class="check-icon">○</span>No obvious predictable patterns</div>
-    </div>
-
-    <div class="recommend">
-        <h3>Recommendations</h3>
-        <ul id="recommendations">
-            <li>Enter a password to begin the local analysis.</li>
-        </ul>
-    </div>
-
-    <div class="privacy">
-        <span>🛡️</span>
-        <p><strong>Privacy:</strong> Analysis happens entirely in your browser. This checker does not transmit, store, or log the password.</p>
-    </div>
-
-    <button class="clear-btn" id="clearPassword" type="button">Clear Password</button>
-
-    <p class="note">
-        Educational password-strength estimator. A strength score cannot guarantee that a password is impossible to crack.
+<section class="section" id="tools">
+<div class="section-inner">
+    <div class="section-label">/ KYNEX TOOLS</div>
+    <h2>Cybersecurity tools</h2>
+    <p class="section-intro">
+        Start with our available tools. More privacy-focused security utilities
+        are being developed and will be added here as they are ready.
     </p>
+
+    <div class="tools-grid">
+
+        <article class="tool-card">
+            <div class="tool-icon">🔐</div>
+            <h3>Password Strength Checker</h3>
+            <p>
+                Test password strength instantly. Check length, character variety
+                and obvious predictable patterns with analysis performed locally in your browser.
+            </p>
+            <span class="status available">● AVAILABLE</span><br>
+            <a class="tool-btn" href="password-strength-checker/">Open Tool →</a>
+        </article>
+
+        <article class="tool-card">
+            <div class="tool-icon">🔑</div>
+            <h3>Password Generator</h3>
+            <p>
+                Generate strong random passwords with adjustable length and
+                character options. Designed to work directly in your browser.
+            </p>
+            <span class="status available">● AVAILABLE</span><br>
+            <a class="tool-btn" href="password-generator/">Open Tool →</a>
+        </article>
+
+        <article class="tool-card">
+            <div class="tool-icon">🧩</div>
+            <h3>Passphrase Generator</h3>
+            <p>
+                Create memorable passphrases using multiple words for accounts
+                and services where a longer phrase is appropriate.
+            </p>
+            <span class="status soon">◌ COMING SOON</span><br>
+            <span class="tool-btn disabled">Coming Soon</span>
+        </article>
+
+        <article class="tool-card">
+            <div class="tool-icon">#️⃣</div>
+            <h3>Hash Generator</h3>
+            <p>
+                Generate cryptographic hashes from text directly in your browser.
+                Useful for learning about integrity and cryptographic functions.
+            </p>
+            <span class="status soon">◌ COMING SOON</span><br>
+            <span class="tool-btn disabled">Coming Soon</span>
+        </article>
+
+        <article class="tool-card">
+            <div class="tool-icon">🌐</div>
+            <h3>URL Security Analyzer</h3>
+            <p>
+                Examine URL characteristics and learn how suspicious links can
+                differ from legitimate destinations without automatically visiting them.
+            </p>
+            <span class="status soon">◌ COMING SOON</span><br>
+            <span class="tool-btn disabled">Coming Soon</span>
+        </article>
+
+        <article class="tool-card">
+            <div class="tool-icon">🛡️</div>
+            <h3>Security Header Checker</h3>
+            <p>
+                Check important HTTP security headers on websites and learn how
+                they can improve browser-side protection.
+            </p>
+            <span class="status soon">◌ COMING SOON</span><br>
+            <span class="tool-btn disabled">Coming Soon</span>
+        </article>
+
+    </div>
 </div>
 </section>
 
-<section class="content" id="how">
-<div class="content-inner">
-    <div class="section-label">/ HOW IT WORKS</div>
-    <h2>How does a password strength checker work?</h2>
-    <p>
-        A password strength checker evaluates characteristics that can affect
-        resistance to common guessing strategies. This Kynex checker looks at
-        password length, character variety, and obvious predictable patterns.
+<section class="section" id="privacy">
+<div class="section-inner">
+    <div class="section-label">/ OUR APPROACH</div>
+    <h2>Privacy first.</h2>
+    <p class="section-intro">
+        Kynex aims to make useful security tools without unnecessarily collecting
+        sensitive information.
     </p>
-    <div class="cards">
-        <div class="card">
-            <h3>📏 Length</h3>
-            <p>Longer passwords generally provide a larger search space than short passwords.</p>
+
+    <div class="features">
+        <div class="feature">
+            <h3>🔒 Local where possible</h3>
+            <p>Tools such as the password checker and generator are designed to perform their work in your browser.</p>
         </div>
-        <div class="card">
-            <h3>🔤 Variety</h3>
-            <p>Uppercase, lowercase, numbers, and symbols can increase character diversity.</p>
+        <div class="feature">
+            <h3>⚡ Free to use</h3>
+            <p>The core Kynex tools are intended to remain accessible without requiring payment.</p>
         </div>
-        <div class="card">
-            <h3>🧠 Patterns</h3>
-            <p>Common words, repeated characters, and obvious sequences can make passwords easier to guess.</p>
+        <div class="feature">
+            <h3>🧠 Security education</h3>
+            <p>Each tool will be accompanied by simple explanations that help users understand what it does.</p>
         </div>
     </div>
 </div>
 </section>
 
-<section class="content" id="security">
-<div class="content-inner">
-    <div class="section-label">/ PASSWORD SECURITY</div>
-    <h2>What makes a password stronger?</h2>
-    <p>
-        Use a long, unique password or passphrase and avoid predictable
-        information, repeated patterns, and passwords reused across multiple accounts.
-    </p>
-    <p>
-        Never enter a real password into a tool you do not trust. Kynex's
-        checker is designed so the analysis runs locally in the browser.
-    </p>
-</div>
-</section>
-
-<section class="content" id="about">
-<div class="content-inner">
-    <div class="section-label">/ KYNEX</div>
+<section class="section" id="about">
+<div class="section-inner">
+    <div class="section-label">/ ABOUT KYNEX</div>
     <h2>Cybersecurity made easier.</h2>
-    <p>
-        Kynex is an India-focused cybersecurity initiative focused on practical
-        digital security, cyber awareness, and safer technology use.
-    </p>
+    <div class="about-box">
+        <p>
+            Kynex is an India-focused cybersecurity initiative focused on practical
+            digital security, cyber awareness, and safer technology use.
+        </p>
+        <p>
+            The goal is simple: build useful cybersecurity tools that are easy to
+            understand, easy to access, and useful for everyday users.
+        </p>
+    </div>
 </div>
 </section>
+
 </main>
 
 <footer>
     <div class="logo">Kyn<span>ex</span></div>
-    <p>© 2026 Kynex. Password security and cyber awareness.</p>
+    <p>© 2026 Kynex. Free cybersecurity tools and cyber awareness.</p>
 </footer>
 
-<script>
-(() => {
-"use strict";
-
-const input = document.getElementById("passwordInput");
-const toggle = document.getElementById("togglePassword");
-const clear = document.getElementById("clearPassword");
-const text = document.getElementById("strengthText");
-const bar = document.getElementById("strengthBar");
-const meter = document.querySelector(".meter");
-const list = document.getElementById("recommendations");
-
-const checks = {
-    length: document.getElementById("lengthCheck"),
-    uppercase: document.getElementById("uppercaseCheck"),
-    lowercase: document.getElementById("lowercaseCheck"),
-    number: document.getElementById("numberCheck"),
-    special: document.getElementById("specialCheck"),
-    pattern: document.getElementById("patternCheck")
-};
-
-const common = new Set([
-    "password","password123","123456","12345678","123456789","1234567890",
-    "qwerty","qwerty123","admin","admin123","letmein","welcome","welcome123",
-    "iloveyou","abc123","india123","india@123","pass123","test123","000000"
-]);
-
-function setCheck(el, ok) {
-    el.classList.toggle("pass", ok);
-    el.querySelector(".check-icon").textContent = ok ? "✓" : "○";
-}
-
-function predictable(p) {
-    if (!p) return false;
-    const s = p.toLowerCase();
-
-    if (common.has(s) || /(.)\1\1/.test(p)) return true;
-
-    for (let i=0;i<=s.length-4;i++) {
-        const a=s.charCodeAt(i), b=s.charCodeAt(i+1),
-              c=s.charCodeAt(i+2), d=s.charCodeAt(i+3);
-        if ((b===a+1&&c===b+1&&d===c+1) ||
-            (b===a-1&&c===b-1&&d===c-1)) return true;
-    }
-
-    for (let n=1;n<=Math.floor(s.length/2);n++) {
-        const block=s.slice(0,n);
-        if (block.length>=2 && s === block.repeat(Math.floor(s.length/n))) return true;
-    }
-
-    return p.length>=6 && new Set(p).size/p.length<0.35;
-}
-
-function analyze(p) {
-    const length=p.length>=12;
-    const upper=/[A-Z]/.test(p);
-    const lower=/[a-z]/.test(p);
-    const number=/\d/.test(p);
-    const special=/[^A-Za-z0-9]/.test(p);
-    const badPattern=predictable(p);
-    const pattern=p.length>0 && !badPattern;
-
-    setCheck(checks.length,length);
-    setCheck(checks.uppercase,upper);
-    setCheck(checks.lowercase,lower);
-    setCheck(checks.number,number);
-    setCheck(checks.special,special);
-    setCheck(checks.pattern,pattern);
-
-    if (!p) {
-        text.textContent="Not tested";
-        text.style.color="#aeb7c5";
-        bar.style.width="0";
-        bar.style.background="#5d6875";
-        bar.style.boxShadow="none";
-        meter.setAttribute("aria-valuenow","0");
-        list.innerHTML="<li>Enter a password to begin the local analysis.</li>";
-        return;
-    }
-
-    let score=0;
-    if(p.length>=8)score++;
-    if(p.length>=12)score+=2;
-    if(p.length>=16)score++;
-    if(p.length>=20)score++;
-    if(upper)score++;
-    if(lower)score++;
-    if(number)score++;
-    if(special)score++;
-    if(pattern)score+=2;
-
-    if(p.length<8)score=Math.min(score,2);
-    if(badPattern)score=Math.max(0,score-3);
-
-    let label,percent;
-    if(score<=2){label="Very Weak";percent=20}
-    else if(score<=4){label="Weak";percent=40}
-    else if(score<=6){label="Moderate";percent=60}
-    else if(score<=8){label="Strong";percent=80}
-    else{label="Very Strong";percent=100}
-
-    const colors={
-        "Very Weak":"#ff5c5c",
-        "Weak":"#ff8a4c",
-        "Moderate":"#ffd166",
-        "Strong":"#63e6be",
-        "Very Strong":"#00ffb0"
-    };
-
-    text.textContent=label;
-    text.style.color=colors[label];
-    bar.style.width=percent+"%";
-    bar.style.background=colors[label];
-    bar.style.boxShadow="0 0 18px "+colors[label]+"55";
-    meter.setAttribute("aria-valuenow",String(percent));
-
-    const tips=[];
-    if(p.length<12)tips.push("Use at least 12 characters; longer is generally better.");
-    if(!upper)tips.push("Add an uppercase letter.");
-    if(!lower)tips.push("Add a lowercase letter.");
-    if(!number)tips.push("Add a number.");
-    if(!special)tips.push("Add a special character such as !, @, #, or %.");
-    if(badPattern)tips.push("Avoid common passwords, repeated characters, and predictable sequences.");
-
-    if(!tips.length) {
-        tips.push("Good combination of length and character variety.");
-        tips.push("Use a unique password and avoid reusing it on other accounts.");
-    }
-
-    list.innerHTML=tips.map(x=>"<li>"+x.replace(/[<>&"]/g,"")+"</li>").join("");
-}
-
-toggle.addEventListener("click",()=>{
-    const show=input.type==="password";
-    input.type=show?"text":"password";
-    toggle.textContent=show?"Hide":"Show";
-});
-
-input.addEventListener("input",()=>analyze(input.value));
-
-clear.addEventListener("click",()=>{
-    input.value="";
-    input.type="password";
-    toggle.textContent="Show";
-    analyze("");
-    input.focus();
-});
-
-analyze("");
-})();
-</script>
 </body>
 </html>
