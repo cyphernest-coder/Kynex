@@ -1,1435 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G6QWWH000"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1G6QWWH000');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Kynex — Indian Cybersecurity</title>
-
-    <meta name="description" content="Kynex is an India-focused cybersecurity initiative built to promote digital security, cyber awareness, and safer technology for everyone.">
-    <meta name="keywords" content="Kynex, cybersecurity India, cyber security, digital security, cyber awareness, India cybersecurity">
-    <meta name="author" content="Kynex">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #05070b;
-            color: #f5f7fa;
-            overflow-x: hidden;
-        }
-
-        /* ---------- BACKGROUND ---------- */
-
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-            background:
-                radial-gradient(circle at 15% 20%, rgba(0, 255, 170, 0.10), transparent 30%),
-                radial-gradient(circle at 85% 25%, rgba(0, 140, 255, 0.12), transparent 30%),
-                radial-gradient(circle at 50% 90%, rgba(120, 0, 255, 0.08), transparent 30%);
-        }
-
-        body::after {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            opacity: 0.08;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px);
-            background-size: 50px 50px;
-            pointer-events: none;
-        }
-
-        /* ---------- NAVBAR ---------- */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            padding: 20px 7%;
-
-            background: rgba(5, 7, 11, 0.70);
-            backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-
-        .logo span {
-            color: #00ffb0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #aeb7c5;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #00ffb0;
-        }
-
-        /* ---------- HERO ---------- */
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 130px 20px 80px;
-        }
-
-        .hero-content {
-            max-width: 900px;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 9px 16px;
-            border-radius: 100px;
-            border: 1px solid rgba(0,255,176,0.3);
-            background: rgba(0,255,176,0.06);
-            color: #00ffb0;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-size: clamp(48px, 8vw, 92px);
-            line-height: 0.95;
-            letter-spacing: -5px;
-            margin-bottom: 30px;
-        }
-
-        .gradient-text {
-            background: linear-gradient(
-                90deg,
-                #ffffff,
-                #00ffb0,
-                #55aaff
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero p {
-            max-width: 680px;
-            margin: auto;
-            color: #9ba6b5;
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            margin-top: 35px;
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 23px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 800;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: #00ffb0;
-            color: #03100b;
-            box-shadow: 0 0 30px rgba(0,255,176,0.15);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 40px rgba(0,255,176,0.35);
-        }
-
-        .btn-secondary {
-            border: 1px solid rgba(255,255,255,0.13);
-            color: white;
-            background: rgba(255,255,255,0.04);
-        }
-
-        .btn-secondary:hover {
-            border-color: #00ffb0;
-            transform: translateY(-3px);
-        }
-
-        /* ---------- GENERAL ---------- */
-
-        section {
-            padding: 110px 7%;
-        }
-
-        .section-heading {
-            max-width: 750px;
-            margin-bottom: 55px;
-        }
-
-        .section-heading .small {
-            color: #00ffb0;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 14px;
-        }
-
-        .section-heading h2 {
-            font-size: clamp(34px, 5vw, 58px);
-            letter-spacing: -2px;
-            margin-bottom: 18px;
-        }
-
-        .section-heading p {
-            color: #8f9baa;
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        /* ---------- CARDS ---------- */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            padding: 30px;
-            border-radius: 22px;
-
-            background: linear-gradient(
-                145deg,
-                rgba(255,255,255,0.06),
-                rgba(255,255,255,0.025)
-            );
-
-            border: 1px solid rgba(255,255,255,0.08);
-
-            transition: 0.35s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(0,255,176,0.3);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-        }
-
-        .icon {
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 14px;
-            background: rgba(0,255,176,0.08);
-            border: 1px solid rgba(0,255,176,0.15);
-
-            font-size: 22px;
-            margin-bottom: 22px;
-        }
-
-        .card h3 {
-            margin-bottom: 12px;
-            font-size: 21px;
-        }
-
-        .card p {
-            color: #8f9baa;
-            line-height: 1.7;
-            font-size: 14px;
-        }
-
-        /* ---------- INDIA SECTION ---------- */
-
-        .india-section {
-            position: relative;
-        }
-
-        .india-box {
-            padding: 55px;
-            border-radius: 30px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(0,255,176,0.08),
-                    rgba(0,130,255,0.05)
-                );
-
-            border: 1px solid rgba(0,255,176,0.16);
-        }
-
-        .india-box h2 {
-            font-size: clamp(35px, 5vw, 62px);
-            letter-spacing: -3px;
-            margin-bottom: 22px;
-        }
-
-        .india-box p {
-            max-width: 850px;
-            color: #a2adbb;
-            line-height: 1.8;
-            font-size: 16px;
-        }
-
-        .india-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 28px;
-        }
-
-        .tag {
-            padding: 9px 13px;
-            border-radius: 100px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            color: #cbd3dd;
-            font-size: 13px;
-        }
-
-        /* ---------- STATS ---------- */
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 35px 20px;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.035);
-            border: 1px solid rgba(255,255,255,0.07);
-        }
-
-        .stat strong {
-            display: block;
-            font-size: 42px;
-            color: #00ffb0;
-            margin-bottom: 8px;
-        }
-
-        .stat span {
-            color: #8994a3;
-            font-size: 14px;
-        }
-
-        /* ---------- CONTACT ---------- */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact-box {
-            max-width: 850px;
-            margin: auto;
-            padding: 65px 30px;
-
-            border-radius: 30px;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(0,255,176,0.10),
-                    rgba(255,255,255,0.025) 55%
-                );
-
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .contact-box h2 {
-            font-size: clamp(38px, 6vw, 65px);
-            letter-spacing: -3px;
-            margin-bottom: 20px;
-        }
-
-        .contact-box p {
-            color: #929dab;
-            line-height: 1.7;
-            max-width: 600px;
-            margin: 0 auto 28px;
-        }
-
-        .email {
-            display: inline-block;
-            color: #00ffb0;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            margin-bottom: 28px;
-            word-break: break-word;
-        }
-
-        .email:hover {
-            text-decoration: underline;
-        }
-
-        /* ---------- FOOTER ---------- */
-
-        footer {
-            padding: 35px 7%;
-            border-top: 1px solid rgba(255,255,255,0.07);
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        footer p {
-            color: #66717f;
-            font-size: 13px;
-        }
-
-        .footer-logo {
-            font-weight: 900;
-        }
-
-        .footer-logo span {
-            color: #00ffb0;
-        }
-
-        /* ---------- RESPONSIVE ---------- */
-
-        @media (max-width: 800px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .cards,
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-            .india-box {
-                padding: 35px 25px;
-            }
-
-            section {
-                padding: 80px 6%;
-            }
-
-            footer {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-
-        /* ---------- ANIMATION ---------- */
-
-        @keyframes floatGlow {
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        .badge {
-            animation: floatGlow 4s ease-in-out infinite;
-        }
-
-        /* ---------- KYNEX PASSWORD CHECKER ---------- */
-
-        .kynex-password-tool {
-            padding: 110px 7%;
-        }
-
-        .password-tool-card {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 45px;
-            border-radius: 30px;
-            background:
-                radial-gradient(circle at 10% 0%, rgba(0,255,176,0.10), transparent 35%),
-                radial-gradient(circle at 100% 100%, rgba(0,140,255,0.08), transparent 35%),
-                linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
-            border: 1px solid rgba(0,255,176,0.16);
-            box-shadow: 0 25px 80px rgba(0,0,0,0.25);
-        }
-
-        .password-tool-header {
-            margin-bottom: 30px;
-        }
-
-        .security-badge {
-            display: inline-block;
-            padding: 8px 13px;
-            margin-bottom: 16px;
-            border-radius: 100px;
-            color: #00ffb0;
-            background: rgba(0,255,176,0.07);
-            border: 1px solid rgba(0,255,176,0.20);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.4px;
-        }
-
-        .password-tool-header h2 {
-            font-size: clamp(34px, 5vw, 56px);
-            letter-spacing: -2px;
-            margin-bottom: 14px;
-        }
-
-        .password-tool-header p {
-            color: #929dab;
-            line-height: 1.7;
-            max-width: 700px;
-        }
-
-        .password-input-wrapper {
-            display: flex;
-            align-items: stretch;
-            gap: 10px;
-            padding: 7px;
-            border-radius: 16px;
-            background: rgba(0,0,0,0.25);
-            border: 1px solid rgba(255,255,255,0.09);
-            transition: 0.25s;
-        }
-
-        .password-input-wrapper:focus-within {
-            border-color: rgba(0,255,176,0.55);
-            box-shadow: 0 0 0 4px rgba(0,255,176,0.06);
-        }
-
-        #passwordInput {
-            min-width: 0;
-            flex: 1;
-            border: 0;
-            outline: 0;
-            background: transparent;
-            color: #f5f7fa;
-            padding: 15px 14px;
-            font-size: 16px;
-            font-family: inherit;
-        }
-
-        #passwordInput::placeholder {
-            color: #687382;
-        }
-
-        .show-password-btn,
-        .clear-password-btn {
-            border: 1px solid rgba(255,255,255,0.10);
-            background: rgba(255,255,255,0.05);
-            color: #dbe2ea;
-            border-radius: 11px;
-            padding: 0 17px;
-            font-weight: 800;
-            cursor: pointer;
-            transition: 0.25s;
-        }
-
-        .show-password-btn:hover,
-        .clear-password-btn:hover {
-            border-color: rgba(0,255,176,0.45);
-            color: #00ffb0;
-            transform: translateY(-1px);
-        }
-
-        .strength-section {
-            margin-top: 28px;
-        }
-
-        .strength-top {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-bottom: 10px;
-            color: #aeb7c5;
-            font-size: 14px;
-        }
-
-        #strengthText {
-            color: #aeb7c5;
-        }
-
-        .strength-meter {
-            height: 10px;
-            overflow: hidden;
-            border-radius: 999px;
-            background: rgba(255,255,255,0.08);
-        }
-
-        .strength-bar {
-            width: 0%;
-            height: 100%;
-            border-radius: inherit;
-            background: #5d6875;
-            transition: width 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
-        }
-
-        .password-checks {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-top: 25px;
-        }
-
-        .check-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            min-height: 48px;
-            padding: 12px 14px;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.035);
-            border: 1px solid rgba(255,255,255,0.07);
-            color: #7f8996;
-            font-size: 14px;
-            transition: 0.25s;
-        }
-
-        .check-icon {
-            width: 23px;
-            height: 23px;
-            flex: 0 0 23px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.16);
-            color: #6e7885;
-            font-size: 13px;
-            font-weight: 900;
-        }
-
-        .check-item.passed {
-            color: #dce5df;
-            border-color: rgba(0,255,176,0.18);
-            background: rgba(0,255,176,0.045);
-        }
-
-        .check-item.passed .check-icon {
-            border-color: rgba(0,255,176,0.55);
-            background: rgba(0,255,176,0.12);
-            color: #00ffb0;
-        }
-
-        .recommendation-box {
-            margin-top: 22px;
-            padding: 20px;
-            border-radius: 16px;
-            background: rgba(255,255,255,0.035);
-            border: 1px solid rgba(255,255,255,0.07);
-        }
-
-        .recommendation-box h3 {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        #recommendations {
-            margin: 0;
-            padding-left: 20px;
-            color: #9ba6b5;
-            line-height: 1.8;
-            font-size: 14px;
-        }
-
-        .privacy-note {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 13px;
-            background: rgba(0,255,176,0.045);
-            border: 1px solid rgba(0,255,176,0.10);
-        }
-
-        .privacy-note p {
-            color: #8995a3;
-            font-size: 13px;
-            line-height: 1.6;
-        }
-
-        .privacy-note strong {
-            color: #cbd5df;
-        }
-
-        .clear-password-btn {
-            margin-top: 18px;
-            min-height: 44px;
-            padding: 0 18px;
-        }
-
-        .educational-note {
-            margin-top: 18px;
-            color: #697482;
-            font-size: 12px;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 650px) {
-            .kynex-password-tool {
-                padding: 80px 6%;
-            }
-
-            .password-tool-card {
-                padding: 28px 20px;
-                border-radius: 24px;
-            }
-
-            .password-input-wrapper {
-                flex-direction: column;
-            }
-
-            .show-password-btn {
-                min-height: 44px;
-            }
-
-            .password-checks {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Password Strength Checker — Free, Private &amp; Instant | Kynex</title>
+<meta name="description" content="Free password strength checker by Kynex. Test password strength instantly in your browser. Check length, character variety and predictable patterns. Your password stays on your device.">
+<meta name="keywords" content="password strength checker, password checker, check password strength, strong password checker, password security, password strength test, Kynex">
+<meta name="author" content="Kynex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://YOUR-DOMAIN.example/password-strength-checker/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Password Strength Checker — Free &amp; Private | Kynex">
+<meta property="og:description" content="Check password strength instantly in your browser. Private client-side analysis by Kynex.">
+<meta property="og:url" content="https://YOUR-DOMAIN.example/password-strength-checker/">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#05070b;
+    color:#f5f7fa;
+    line-height:1.6;
+    overflow-x:hidden
+}
+body:before{
+    content:"";position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(circle at 15% 15%,rgba(0,255,176,.12),transparent 30%),
+      radial-gradient(circle at 85% 25%,rgba(0,140,255,.11),transparent 30%),
+      radial-gradient(circle at 50% 90%,rgba(120,0,255,.08),transparent 30%)
+}
+body:after{
+    content:"";position:fixed;inset:0;z-index:-1;opacity:.07;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,255,255,.15) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.15) 1px,transparent 1px);
+    background-size:50px 50px
+}
+nav{
+    position:sticky;top:0;z-index:1000;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 7%;
+    background:rgba(5,7,11,.78);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.06)
+}
+.logo{font-size:25px;font-weight:900;letter-spacing:-1px}
+.logo span{color:#00ffb0}
+.nav-links{display:flex;gap:25px;list-style:none}
+.nav-links a{color:#aeb7c5;text-decoration:none;font-size:14px;font-weight:700}
+.nav-links a:hover{color:#00ffb0}
+
+main{max-width:1180px;margin:auto}
+.hero{
+    text-align:center;padding:85px 20px 40px
+}
+.badge{
+    display:inline-block;padding:8px 14px;border-radius:100px;
+    border:1px solid rgba(0,255,176,.28);
+    background:rgba(0,255,176,.06);
+    color:#00ffb0;font-size:12px;font-weight:800;
+    letter-spacing:1.2px;margin-bottom:20px
+}
+h1{
+    font-size:clamp(45px,7vw,78px);
+    line-height:.98;letter-spacing:-4px;margin-bottom:22px
+}
+.gradient{
+    background:linear-gradient(90deg,#fff,#00ffb0,#55aaff);
+    -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.hero p{max-width:720px;margin:auto;color:#9ba6b5;font-size:17px}
+.tool-section{padding:30px 20px 80px}
+.tool-card{
+    max-width:900px;margin:auto;padding:38px;
+    border-radius:30px;
+    background:
+      radial-gradient(circle at 10% 0%,rgba(0,255,176,.10),transparent 35%),
+      linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+    border:1px solid rgba(0,255,176,.17);
+    box-shadow:0 25px 80px rgba(0,0,0,.28)
+}
+.tool-title{text-align:center;margin-bottom:28px}
+.tool-title h2{font-size:30px;margin-bottom:8px}
+.tool-title p{color:#8995a3;font-size:14px}
+.input-wrap{
+    display:flex;gap:8px;padding:7px;border-radius:16px;
+    background:rgba(0,0,0,.28);
+    border:1px solid rgba(255,255,255,.09)
+}
+#passwordInput{
+    flex:1;min-width:0;border:0;outline:0;background:transparent;
+    color:#fff;padding:15px;font-size:17px;font-family:inherit
+}
+#passwordInput::placeholder{color:#65707e}
+.action-btn,.clear-btn{
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.05);
+    color:#dce3eb;border-radius:11px;
+    padding:0 17px;font-weight:800;cursor:pointer
+}
+.action-btn:hover,.clear-btn:hover{border-color:#00ffb0;color:#00ffb0}
+.strength{margin-top:26px}
+.strength-top{display:flex;justify-content:space-between;margin-bottom:9px;color:#aeb7c5}
+#strengthText{font-weight:900}
+.meter{height:11px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
+#strengthBar{
+    height:100%;width:0;border-radius:inherit;
+    background:#5d6875;transition:width .35s,background .35s,box-shadow .35s
+}
+.checks{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:10px;margin-top:25px
+}
+.check{
+    display:flex;align-items:center;gap:10px;padding:12px;
+    border-radius:12px;background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+    color:#7f8996;font-size:14px
+}
+.check-icon{
+    width:23px;height:23px;flex:0 0 23px;
+    display:grid;place-items:center;border-radius:50%;
+    border:1px solid rgba(255,255,255,.16)
+}
+.check.pass{
+    color:#dce5df;border-color:rgba(0,255,176,.18);
+    background:rgba(0,255,176,.045)
+}
+.check.pass .check-icon{color:#00ffb0;border-color:#00ffb0}
+.recommend{
+    margin-top:20px;padding:19px;border-radius:15px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07)
+}
+.recommend h3{font-size:16px;margin-bottom:8px}
+#recommendations{padding-left:20px;color:#9ba6b5;font-size:14px}
+.privacy{
+    display:flex;gap:10px;margin-top:18px;padding:15px;
+    border-radius:13px;background:rgba(0,255,176,.045);
+    border:1px solid rgba(0,255,176,.1)
+}
+.privacy p{color:#8995a3;font-size:13px}
+.clear-btn{min-height:43px;margin-top:17px}
+.note{margin-top:16px;color:#687482;font-size:12px}
+
+.content{padding:70px 20px}
+.content-inner{max-width:900px;margin:auto}
+.section-label{color:#00ffb0;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(32px,5vw,50px);letter-spacing:-2px;margin-bottom:18px}
+.content p{color:#9ba6b5;margin-bottom:18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.card{
+    padding:24px;border-radius:18px;background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07)
+}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{font-size:14px;margin:0}
+footer{
+    padding:30px 7%;border-top:1px solid rgba(255,255,255,.07);
+    display:flex;justify-content:space-between;gap:20px
+}
+footer p{color:#687482;font-size:13px}
+@media(max-width:700px){
+    .nav-links{display:none}
+    .hero{padding-top:60px}
+    .tool-card{padding:24px 18px}
+    .input-wrap{flex-direction:column}
+    .action-btn{min-height:44px}
+    .checks,.cards{grid-template-columns:1fr}
+    footer{flex-direction:column;text-align:center}
+}
+</style>
 </head>
 
 <body>
-
-    <!-- NAVIGATION -->
-
-    <nav>
-        <div class="logo">
-            Kyn<span>ex</span>
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Security</a></li>
-            <li><a href="#india">India</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <div class="badge">
-                🇮🇳 INDIA-FOCUSED CYBERSECURITY
-            </div>
-
-            <h1>
-                Security for the
-                <span class="gradient-text">digital India.</span>
-            </h1>
-
-            <p>
-                Kynex is an India-focused cybersecurity initiative built around
-                cyber awareness, digital safety, and a stronger security mindset
-                for the next generation of technology users.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#services" class="btn btn-primary">
-                    Explore Security →
-                </a>
-
-                <a href="#contact" class="btn btn-secondary">
-                    Contact Kynex
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="section-heading">
-
-            <div class="small">
-                / WHO WE ARE
-            </div>
-
-            <h2>
-                Cybersecurity shouldn't feel complicated.
-            </h2>
-
-            <p>
-                Kynex focuses on making cybersecurity easier to understand,
-                easier to approach, and more relevant to everyday digital life.
-            </p>
-
-        </div>
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="icon">🛡️</div>
-
-                <h3>
-                    Security First
-                </h3>
-
-                <p>
-                    We promote a security-first mindset where privacy,
-                    awareness, and responsible technology use come before
-                    convenience.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">🧠</div>
-
-                <h3>
-                    Cyber Awareness
-                </h3>
-
-                <p>
-                    Understanding threats is one of the strongest defenses.
-                    Kynex aims to make cybersecurity concepts understandable
-                    for students, creators, businesses, and everyday users.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">⚡</div>
-
-                <h3>
-                    Future Ready
-                </h3>
-
-                <p>
-                    Technology changes quickly. Kynex focuses on developing
-                    security awareness that can evolve with the digital world.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SECURITY -->
-
-    <section id="services">
-
-        <div class="section-heading">
-
-            <div class="small">
-                / SECURITY
-            </div>
-
-            <h2>
-                Think ahead of the threat.
-            </h2>
-
-            <p>
-                Cybersecurity is more than reacting to attacks. It's about
-                understanding risk, recognizing suspicious behavior, and
-                building safer digital habits.
-            </p>
-
-        </div>
-
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="icon">🔐</div>
-
-                <h3>
-                    Digital Security
-                </h3>
-
-                <p>
-                    Learn the fundamentals of protecting accounts, devices,
-                    personal information, and digital identities.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">🚨</div>
-
-                <h3>
-                    Threat Awareness
-                </h3>
-
-                <p>
-                    Understand common cyber risks such as phishing,
-                    credential theft, scams, malicious links, and social
-                    engineering.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">🌐</div>
-
-                <h3>
-                    Safer Internet
-                </h3>
-
-                <p>
-                    Encourage responsible and informed participation in the
-                    rapidly expanding digital ecosystem.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- INDIA -->
-
-    <section id="india" class="india-section">
-
-        <div class="india-box">
-
-            <div class="section-heading">
-
-                <div class="small">
-                    / BUILT WITH INDIA IN MIND
-                </div>
-
-                <h2>
-                    Cybersecurity for a billion+ digital journeys.
-                </h2>
-
-            </div>
-
-            <p>
-                India is experiencing one of the world's fastest-growing
-                digital transformations. From digital payments and online
-                education to businesses, creators, cloud platforms, and
-                connected devices, more of everyday life is moving online.
-                Kynex is built with this environment in mind — an
-                India-focused cybersecurity initiative that aims to encourage
-                stronger cyber awareness, responsible technology use, and
-                practical digital security habits. Our goal is simple:
-                help build a generation that doesn't just use technology,
-                but understands how to use it safely.
-            </p>
-
-            <div class="india-tags">
-
-                <div class="tag">🇮🇳 India</div>
-                <div class="tag">Cyber Awareness</div>
-                <div class="tag">Digital Safety</div>
-                <div class="tag">Privacy</div>
-                <div class="tag">Technology</div>
-                <div class="tag">Security Mindset</div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- MISSION -->
-
-    <section>
-
-        <div class="section-heading">
-
-            <div class="small">
-                / THE MISSION
-            </div>
-
-            <h2>
-                Make security part of the culture.
-            </h2>
-
-            <p>
-                Kynex is working toward a future where cybersecurity isn't
-                something people think about only after something goes wrong.
-            </p>
-
-        </div>
-
-
-        <div class="stats">
-
-            <div class="stat">
-                <strong>01</strong>
-                <span>Awareness</span>
-            </div>
-
-            <div class="stat">
-                <strong>02</strong>
-                <span>Education</span>
-            </div>
-
-            <div class="stat">
-                <strong>03</strong>
-                <span>Innovation</span>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="contact">
-
-        <div class="contact-box">
-
-            <div class="small">
-                / CONTACT
-            </div>
-
-            <h2>
-                Let's connect.
-            </h2>
-
-            <p>
-                Have an idea, question, collaboration proposal, or simply
-                want to talk cybersecurity? Reach out to Kynex.
-            </p>
-
-            <a
-                class="email"
-                href="mailto:professionalworkfor249@gmail.com"
-            >
-                professionalworkfor249@gmail.com
-            </a>
-
-            <br>
-
-            <a
-                href="mailto:professionalworkfor249@gmail.com"
-                class="btn btn-primary"
-            >
-                Email Kynex →
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-logo">
-            Kyn<span>ex</span>
-        </div>
-
-        <p>
-            © 2026 Kynex. Building a more security-aware digital India.
-        </p>
-
-    </footer>
-<!-- Kynex Password Strength Checker -->
-<section class="kynex-password-tool" id="password-checker">
-  <div class="password-tool-card">
-
-    <div class="password-tool-header">
-      <span class="security-badge">🔐 KYNEX SECURITY TOOL</span>
-      <h2>Password Strength Checker</h2>
-      <p>
-        Test your password locally in your browser.
-        Your password is never sent to Kynex or any external service.
-      </p>
-    </div>
-
-    <div class="password-input-wrapper">
-      <input
-        type="password"
-        id="passwordInput"
-        placeholder="Enter a password to test"
-        autocomplete="new-password"
-        spellcheck="false"
-        aria-label="Password to test"
-      />
-
-      <button
-        type="button"
-        id="togglePassword"
-        class="show-password-btn"
-        aria-label="Show password"
-      >
-        Show
-      </button>
-    </div>
-
-    <div class="strength-section">
-      <div class="strength-top">
-        <span>Strength</span>
-        <strong id="strengthText">Not tested</strong>
-      </div>
-
-      <div
-        class="strength-meter"
-        role="progressbar"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow="0"
-        aria-label="Password strength"
-      >
-        <div id="strengthBar" class="strength-bar"></div>
-      </div>
-    </div>
-
-    <div class="password-checks">
-      <div class="check-item" id="lengthCheck">
-        <span class="check-icon">○</span>
-        <span>At least 12 characters</span>
-      </div>
-
-      <div class="check-item" id="uppercaseCheck">
-        <span class="check-icon">○</span>
-        <span>Uppercase letter</span>
-      </div>
-
-      <div class="check-item" id="lowercaseCheck">
-        <span class="check-icon">○</span>
-        <span>Lowercase letter</span>
-      </div>
-
-      <div class="check-item" id="numberCheck">
-        <span class="check-icon">○</span>
-        <span>Number</span>
-      </div>
-
-      <div class="check-item" id="specialCheck">
-        <span class="check-icon">○</span>
-        <span>Special character</span>
-      </div>
-
-      <div class="check-item" id="patternCheck">
-        <span class="check-icon">○</span>
-        <span>No obvious repeated/predictable patterns</span>
-      </div>
-    </div>
-
-    <div class="recommendation-box">
-      <h3>Recommendations</h3>
-      <ul id="recommendations">
-        <li>Enter a password to begin the local analysis.</li>
-      </ul>
-    </div>
-
-    <div class="privacy-note">
-      <span>🛡️</span>
-      <p>
-        <strong>Privacy:</strong>
-        Analysis happens entirely in your browser.
-        No password is transmitted, stored, or logged.
-      </p>
-    </div>
-
-    <button type="button" id="clearPassword" class="clear-password-btn">
-      Clear Password
-    </button>
-
-    <p class="educational-note">
-      Educational password-strength estimator — not a guarantee that a
-      password is secure or impossible to crack.
+<nav>
+    <div class="logo">Kyn<span>ex</span></div>
+    <ul class="nav-links">
+        <li><a href="#checker">Password Checker</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#about">About Kynex</a></li>
+    </ul>
+</nav>
+
+<main>
+<section class="hero">
+    <div class="badge">🔐 FREE PASSWORD SECURITY TOOL</div>
+    <h1>Free <span class="gradient">Password Strength Checker</span></h1>
+    <p>
+        Check how strong a password is instantly. Kynex analyzes it locally
+        in your browser for length, character variety, and predictable patterns.
     </p>
-
-  </div>
 </section>
 
-    <script>
-        (() => {
-            "use strict";
+<section class="tool-section" id="checker">
+<div class="tool-card">
+    <div class="tool-title">
+        <h2>Check Your Password Strength</h2>
+        <p>Your password is analyzed locally and is not sent to Kynex or an external service.</p>
+    </div>
 
-            const passwordInput = document.getElementById("passwordInput");
-            const togglePassword = document.getElementById("togglePassword");
-            const clearPassword = document.getElementById("clearPassword");
-            const strengthText = document.getElementById("strengthText");
-            const strengthBar = document.getElementById("strengthBar");
-            const strengthMeter = document.querySelector(".strength-meter");
-            const recommendations = document.getElementById("recommendations");
+    <div class="input-wrap">
+        <input id="passwordInput" type="password"
+               placeholder="Enter a password to test"
+               autocomplete="new-password"
+               spellcheck="false"
+               aria-label="Password to test">
+        <button class="action-btn" id="togglePassword" type="button">Show</button>
+    </div>
 
-            const checks = {
-                length: document.getElementById("lengthCheck"),
-                uppercase: document.getElementById("uppercaseCheck"),
-                lowercase: document.getElementById("lowercaseCheck"),
-                number: document.getElementById("numberCheck"),
-                special: document.getElementById("specialCheck"),
-                pattern: document.getElementById("patternCheck")
-            };
+    <div class="strength">
+        <div class="strength-top">
+            <span>Strength</span>
+            <strong id="strengthText">Not tested</strong>
+        </div>
+        <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="strengthBar"></div>
+        </div>
+    </div>
 
-            const commonPasswords = new Set([
-                "password", "password123", "123456", "12345678", "123456789",
-                "1234567890", "qwerty", "qwerty123", "admin", "admin123",
-                "letmein", "welcome", "welcome123", "iloveyou", "abc123",
-                "india123", "india@123", "pass123", "test123", "000000"
-            ]);
+    <div class="checks">
+        <div class="check" id="lengthCheck"><span class="check-icon">○</span>At least 12 characters</div>
+        <div class="check" id="uppercaseCheck"><span class="check-icon">○</span>Uppercase letter</div>
+        <div class="check" id="lowercaseCheck"><span class="check-icon">○</span>Lowercase letter</div>
+        <div class="check" id="numberCheck"><span class="check-icon">○</span>Number</div>
+        <div class="check" id="specialCheck"><span class="check-icon">○</span>Special character</div>
+        <div class="check" id="patternCheck"><span class="check-icon">○</span>No obvious predictable patterns</div>
+    </div>
 
-            function setCheck(element, passed) {
-                element.classList.toggle("passed", passed);
-                const icon = element.querySelector(".check-icon");
-                icon.textContent = passed ? "✓" : "○";
-            }
+    <div class="recommend">
+        <h3>Recommendations</h3>
+        <ul id="recommendations">
+            <li>Enter a password to begin the local analysis.</li>
+        </ul>
+    </div>
 
-            function hasPredictablePattern(password) {
-                if (!password) return false;
+    <div class="privacy">
+        <span>🛡️</span>
+        <p><strong>Privacy:</strong> Analysis happens entirely in your browser. This checker does not transmit, store, or log the password.</p>
+    </div>
 
-                const lower = password.toLowerCase();
+    <button class="clear-btn" id="clearPassword" type="button">Clear Password</button>
 
-                // Common password / obvious words.
-                if (commonPasswords.has(lower)) return true;
+    <p class="note">
+        Educational password-strength estimator. A strength score cannot guarantee that a password is impossible to crack.
+    </p>
+</div>
+</section>
 
-                // Three or more identical consecutive characters.
-                if (/(.)\1\1/.test(password)) return true;
+<section class="content" id="how">
+<div class="content-inner">
+    <div class="section-label">/ HOW IT WORKS</div>
+    <h2>How does a password strength checker work?</h2>
+    <p>
+        A password strength checker evaluates characteristics that can affect
+        resistance to common guessing strategies. This Kynex checker looks at
+        password length, character variety, and obvious predictable patterns.
+    </p>
+    <div class="cards">
+        <div class="card">
+            <h3>📏 Length</h3>
+            <p>Longer passwords generally provide a larger search space than short passwords.</p>
+        </div>
+        <div class="card">
+            <h3>🔤 Variety</h3>
+            <p>Uppercase, lowercase, numbers, and symbols can increase character diversity.</p>
+        </div>
+        <div class="card">
+            <h3>🧠 Patterns</h3>
+            <p>Common words, repeated characters, and obvious sequences can make passwords easier to guess.</p>
+        </div>
+    </div>
+</div>
+</section>
 
-                // Obvious ascending/descending sequences such as 1234, abcd, dcba.
-                for (let i = 0; i <= lower.length - 4; i++) {
-                    const a = lower.charCodeAt(i);
-                    const b = lower.charCodeAt(i + 1);
-                    const c = lower.charCodeAt(i + 2);
-                    const d = lower.charCodeAt(i + 3);
+<section class="content" id="security">
+<div class="content-inner">
+    <div class="section-label">/ PASSWORD SECURITY</div>
+    <h2>What makes a password stronger?</h2>
+    <p>
+        Use a long, unique password or passphrase and avoid predictable
+        information, repeated patterns, and passwords reused across multiple accounts.
+    </p>
+    <p>
+        Never enter a real password into a tool you do not trust. Kynex's
+        checker is designed so the analysis runs locally in the browser.
+    </p>
+</div>
+</section>
 
-                    if (
-                        b === a + 1 && c === b + 1 && d === c + 1 ||
-                        b === a - 1 && c === b - 1 && d === c - 1
-                    ) {
-                        return true;
-                    }
-                }
+<section class="content" id="about">
+<div class="content-inner">
+    <div class="section-label">/ KYNEX</div>
+    <h2>Cybersecurity made easier.</h2>
+    <p>
+        Kynex is an India-focused cybersecurity initiative focused on practical
+        digital security, cyber awareness, and safer technology use.
+    </p>
+</div>
+</section>
+</main>
 
-                // Repeated blocks such as abcabc or 1212.
-                for (let size = 1; size <= Math.floor(lower.length / 2); size++) {
-                    const first = lower.slice(0, size);
-                    if (
-                        first.length >= 2 &&
-                        lower.length >= size * 2 &&
-                        lower === first.repeat(Math.floor(lower.length / size))
-                    ) {
-                        return true;
-                    }
-                }
+<footer>
+    <div class="logo">Kyn<span>ex</span></div>
+    <p>© 2026 Kynex. Password security and cyber awareness.</p>
+</footer>
 
-                // Very low character diversity.
-                const uniqueCharacters = new Set(password).size;
-                if (password.length >= 6 && uniqueCharacters / password.length < 0.35) {
-                    return true;
-                }
+<script>
+(() => {
+"use strict";
 
-                return false;
-            }
+const input = document.getElementById("passwordInput");
+const toggle = document.getElementById("togglePassword");
+const clear = document.getElementById("clearPassword");
+const text = document.getElementById("strengthText");
+const bar = document.getElementById("strengthBar");
+const meter = document.querySelector(".meter");
+const list = document.getElementById("recommendations");
 
-            function analyzePassword(password) {
-                const length = password.length >= 12;
-                const uppercase = /[A-Z]/.test(password);
-                const lowercase = /[a-z]/.test(password);
-                const number = /\d/.test(password);
-                const special = /[^A-Za-z0-9]/.test(password);
-                const predictable = hasPredictablePattern(password);
-                const pattern = password.length > 0 && !predictable;
+const checks = {
+    length: document.getElementById("lengthCheck"),
+    uppercase: document.getElementById("uppercaseCheck"),
+    lowercase: document.getElementById("lowercaseCheck"),
+    number: document.getElementById("numberCheck"),
+    special: document.getElementById("specialCheck"),
+    pattern: document.getElementById("patternCheck")
+};
 
-                setCheck(checks.length, length);
-                setCheck(checks.uppercase, uppercase);
-                setCheck(checks.lowercase, lowercase);
-                setCheck(checks.number, number);
-                setCheck(checks.special, special);
-                setCheck(checks.pattern, pattern);
+const common = new Set([
+    "password","password123","123456","12345678","123456789","1234567890",
+    "qwerty","qwerty123","admin","admin123","letmein","welcome","welcome123",
+    "iloveyou","abc123","india123","india@123","pass123","test123","000000"
+]);
 
-                if (!password) {
-                    strengthText.textContent = "Not tested";
-                    strengthText.style.color = "#aeb7c5";
-                    strengthBar.style.width = "0%";
-                    strengthBar.style.background = "#5d6875";
-                    strengthBar.style.boxShadow = "none";
-                    strengthMeter.setAttribute("aria-valuenow", "0");
-                    recommendations.innerHTML =
-                        "<li>Enter a password to begin the local analysis.</li>";
-                    return;
-                }
+function setCheck(el, ok) {
+    el.classList.toggle("pass", ok);
+    el.querySelector(".check-icon").textContent = ok ? "✓" : "○";
+}
 
-                let score = 0;
+function predictable(p) {
+    if (!p) return false;
+    const s = p.toLowerCase();
 
-                // Length is deliberately weighted heavily.
-                if (password.length >= 8) score += 1;
-                if (password.length >= 12) score += 2;
-                if (password.length >= 16) score += 1;
-                if (password.length >= 20) score += 1;
+    if (common.has(s) || /(.)\1\1/.test(p)) return true;
 
-                if (uppercase) score += 1;
-                if (lowercase) score += 1;
-                if (number) score += 1;
-                if (special) score += 1;
-                if (pattern) score += 2;
+    for (let i=0;i<=s.length-4;i++) {
+        const a=s.charCodeAt(i), b=s.charCodeAt(i+1),
+              c=s.charCodeAt(i+2), d=s.charCodeAt(i+3);
+        if ((b===a+1&&c===b+1&&d===c+1) ||
+            (b===a-1&&c===b-1&&d===c-1)) return true;
+    }
 
-                // Penalize very short or obviously predictable passwords.
-                if (password.length < 8) score = Math.min(score, 2);
-                if (predictable) score = Math.max(0, score - 3);
+    for (let n=1;n<=Math.floor(s.length/2);n++) {
+        const block=s.slice(0,n);
+        if (block.length>=2 && s === block.repeat(Math.floor(s.length/n))) return true;
+    }
 
-                let label;
-                let percentage;
+    return p.length>=6 && new Set(p).size/p.length<0.35;
+}
 
-                if (score <= 2) {
-                    label = "Very Weak";
-                    percentage = 20;
-                } else if (score <= 4) {
-                    label = "Weak";
-                    percentage = 40;
-                } else if (score <= 6) {
-                    label = "Moderate";
-                    percentage = 60;
-                } else if (score <= 8) {
-                    label = "Strong";
-                    percentage = 80;
-                } else {
-                    label = "Very Strong";
-                    percentage = 100;
-                }
+function analyze(p) {
+    const length=p.length>=12;
+    const upper=/[A-Z]/.test(p);
+    const lower=/[a-z]/.test(p);
+    const number=/\d/.test(p);
+    const special=/[^A-Za-z0-9]/.test(p);
+    const badPattern=predictable(p);
+    const pattern=p.length>0 && !badPattern;
 
-                strengthText.textContent = label;
-                strengthBar.style.width = percentage + "%";
-                strengthMeter.setAttribute("aria-valuenow", String(percentage));
+    setCheck(checks.length,length);
+    setCheck(checks.uppercase,upper);
+    setCheck(checks.lowercase,lower);
+    setCheck(checks.number,number);
+    setCheck(checks.special,special);
+    setCheck(checks.pattern,pattern);
 
-                const strengthColor = {
-                    "Very Weak": "#ff5c5c",
-                    "Weak": "#ff8a4c",
-                    "Moderate": "#ffd166",
-                    "Strong": "#63e6be",
-                    "Very Strong": "#00ffb0"
-                }[label];
+    if (!p) {
+        text.textContent="Not tested";
+        text.style.color="#aeb7c5";
+        bar.style.width="0";
+        bar.style.background="#5d6875";
+        bar.style.boxShadow="none";
+        meter.setAttribute("aria-valuenow","0");
+        list.innerHTML="<li>Enter a password to begin the local analysis.</li>";
+        return;
+    }
 
-                strengthText.style.color = strengthColor;
-                strengthBar.style.background = strengthColor;
-                strengthBar.style.boxShadow = "0 0 18px " + strengthColor + "55";
+    let score=0;
+    if(p.length>=8)score++;
+    if(p.length>=12)score+=2;
+    if(p.length>=16)score++;
+    if(p.length>=20)score++;
+    if(upper)score++;
+    if(lower)score++;
+    if(number)score++;
+    if(special)score++;
+    if(pattern)score+=2;
 
-                const tips = [];
+    if(p.length<8)score=Math.min(score,2);
+    if(badPattern)score=Math.max(0,score-3);
 
-                if (password.length < 12) {
-                    tips.push("Use at least 12 characters; longer is generally better.");
-                }
-                if (!uppercase) {
-                    tips.push("Add at least one uppercase letter.");
-                }
-                if (!lowercase) {
-                    tips.push("Add at least one lowercase letter.");
-                }
-                if (!number) {
-                    tips.push("Add at least one number.");
-                }
-                if (!special) {
-                    tips.push("Add a special character such as !, @, #, or %.");
-                }
-                if (predictable) {
-                    tips.push("Avoid common passwords, repeated characters, and predictable sequences.");
-                }
-                if (tips.length === 0) {
-                    tips.push("Good combination of length and character variety.");
-                    tips.push("Use a unique password that you do not reuse on other accounts.");
-                }
+    let label,percent;
+    if(score<=2){label="Very Weak";percent=20}
+    else if(score<=4){label="Weak";percent=40}
+    else if(score<=6){label="Moderate";percent=60}
+    else if(score<=8){label="Strong";percent=80}
+    else{label="Very Strong";percent=100}
 
-                recommendations.innerHTML = tips
-                    .map(tip => "<li>" + tip.replace(/[<>&"]/g, "") + "</li>")
-                    .join("");
-            }
+    const colors={
+        "Very Weak":"#ff5c5c",
+        "Weak":"#ff8a4c",
+        "Moderate":"#ffd166",
+        "Strong":"#63e6be",
+        "Very Strong":"#00ffb0"
+    };
 
-            togglePassword.addEventListener("click", () => {
-                const isHidden = passwordInput.type === "password";
-                passwordInput.type = isHidden ? "text" : "password";
-                togglePassword.textContent = isHidden ? "Hide" : "Show";
-                togglePassword.setAttribute(
-                    "aria-label",
-                    isHidden ? "Hide password" : "Show password"
-                );
-            });
+    text.textContent=label;
+    text.style.color=colors[label];
+    bar.style.width=percent+"%";
+    bar.style.background=colors[label];
+    bar.style.boxShadow="0 0 18px "+colors[label]+"55";
+    meter.setAttribute("aria-valuenow",String(percent));
 
-            passwordInput.addEventListener("input", () => {
-                analyzePassword(passwordInput.value);
-            });
+    const tips=[];
+    if(p.length<12)tips.push("Use at least 12 characters; longer is generally better.");
+    if(!upper)tips.push("Add an uppercase letter.");
+    if(!lower)tips.push("Add a lowercase letter.");
+    if(!number)tips.push("Add a number.");
+    if(!special)tips.push("Add a special character such as !, @, #, or %.");
+    if(badPattern)tips.push("Avoid common passwords, repeated characters, and predictable sequences.");
 
-            clearPassword.addEventListener("click", () => {
-                passwordInput.value = "";
-                passwordInput.type = "password";
-                togglePassword.textContent = "Show";
-                togglePassword.setAttribute("aria-label", "Show password");
-                analyzePassword("");
-                passwordInput.focus();
-            });
+    if(!tips.length) {
+        tips.push("Good combination of length and character variety.");
+        tips.push("Use a unique password and avoid reusing it on other accounts.");
+    }
 
-            analyzePassword("");
-        })();
-    </script>
+    list.innerHTML=tips.map(x=>"<li>"+x.replace(/[<>&"]/g,"")+"</li>").join("");
+}
 
+toggle.addEventListener("click",()=>{
+    const show=input.type==="password";
+    input.type=show?"text":"password";
+    toggle.textContent=show?"Hide":"Show";
+});
+
+input.addEventListener("input",()=>analyze(input.value));
+
+clear.addEventListener("click",()=>{
+    input.value="";
+    input.type="password";
+    toggle.textContent="Show";
+    analyze("");
+    input.focus();
+});
+
+analyze("");
+})();
+</script>
 </body>
 </html>
