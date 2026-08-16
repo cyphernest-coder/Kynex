@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kynex — Free Cybersecurity Tools & Resources</title>
+<title>Kynex — Free Cybersecurity Tools & Digital Security</title>
 <meta name="description" content="Kynex provides free, privacy-focused cybersecurity tools including a Password Strength Checker and Password Generator. More security tools coming soon.">
 <meta name="keywords" content="Kynex, cybersecurity tools, free cybersecurity tools, password strength checker, password generator, cyber security">
 <meta name="author" content="Kynex">
@@ -21,7 +21,7 @@
 html{scroll-behavior:smooth}
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#05070b;color:#f5f7fa;line-height:1.6;overflow-x:hidden
+    background:#05070b;color:var(--text);line-height:1.6;overflow-x:hidden
 }
 body:before{
     content:"";position:fixed;inset:0;z-index:-2;
@@ -64,7 +64,7 @@ h1{
     background:linear-gradient(90deg,#fff,#00ffb0,#55aaff);
     -webkit-background-clip:text;background-clip:text;color:transparent
 }
-.hero p{max-width:720px;margin:auto;color:#9ba6b5;font-size:18px}
+.hero p{max-width:720px;margin:auto;color:var(--muted);font-size:18px}
 .hero-actions{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
 .btn{
     display:inline-flex;align-items:center;justify-content:center;
@@ -86,7 +86,7 @@ h1{
     text-transform:uppercase;margin-bottom:12px
 }
 h2{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;margin-bottom:14px}
-.section-intro{color:#9ba6b5;max-width:700px;margin-bottom:35px}
+.section-intro{color:var(--muted);max-width:700px;margin-bottom:35px}
 
 .tools-grid{
     display:grid;grid-template-columns:repeat(2,1fr);gap:18px
@@ -94,7 +94,7 @@ h2{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;margin-bottom:14px}
 .tool-card{
     position:relative;padding:28px;border-radius:22px;
     background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
     transition:.2s;overflow:hidden
 }
 .tool-card:before{
@@ -125,7 +125,7 @@ h2{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;margin-bottom:14px}
     display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px
 }
 .feature{
-    padding:23px;border-radius:17px;background:rgba(255,255,255,.035);
+    padding:23px;border-radius:17px;background:var(--card);
     border:1px solid rgba(255,255,255,.07)
 }
 .feature h3{font-size:17px;margin-bottom:7px}
@@ -136,7 +136,7 @@ h2{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;margin-bottom:14px}
     background:linear-gradient(145deg,rgba(0,255,176,.06),rgba(255,255,255,.025));
     border:1px solid rgba(0,255,176,.12)
 }
-.about-box p{color:#9ba6b5;margin-bottom:15px}
+.about-box p{color:var(--muted);margin-bottom:15px}
 .about-box p:last-child{margin-bottom:0}
 
 footer{
@@ -145,15 +145,113 @@ footer{
 }
 footer p{color:#687482;font-size:13px}
 
+
+.theme-controls{display:flex;align-items:center;gap:8px}
+.theme-btn{
+    min-height:38px;padding:0 12px;border-radius:10px;
+    border:1px solid var(--border);background:var(--card);
+    color:var(--text);font-weight:800;cursor:pointer
+}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
+html[data-theme="light"] nav{
+    background:rgba(244,247,249,.88);
+    border-bottom-color:rgba(15,30,45,.10)
+}
+html[data-theme="light"] .tool-card{
+    box-shadow:0 18px 50px rgba(20,35,50,.07)
+}
+.contact-box{
+    padding:32px;border-radius:23px;
+    background:linear-gradient(145deg,rgba(0,255,176,.06),rgba(255,255,255,.025));
+    border:1px solid rgba(0,255,176,.12)
+}
+.contact-box p{color:var(--muted);margin-bottom:15px}
+.contact-email{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:12px 16px;border-radius:11px;
+    background:rgba(0,255,176,.06);
+    border:1px solid rgba(0,255,176,.16);
+    color:var(--accent);font-weight:900;text-decoration:none;
+    word-break:break-word
+}
+.contact-email:hover{border-color:var(--accent)}
+
 @media(max-width:700px){
+    nav{padding:15px 16px}
     .nav-links{display:none}
+    .theme-controls{margin-left:auto}
     .hero{padding:70px 20px 55px}
     .hero-actions{flex-direction:column}
     .btn{width:100%}
     .tools-grid,.features{grid-template-columns:1fr}
     .tool-card{padding:23px}
+    .contact-box{padding:24px 18px}
+    .contact-email{font-size:13px}
     footer{flex-direction:column;text-align:center}
 }
+
+html[data-theme="light"] body{
+    background:var(--bg);
+    color:var(--text);
+}
+html[data-theme="light"] .tool-card,
+html[data-theme="light"] .card,
+html[data-theme="light"] .contact-box{
+    background:var(--card-strong);
+    color:var(--text);
+    border-color:var(--border);
+}
+html[data-theme="light"] .tool-card p,
+html[data-theme="light"] .card p,
+html[data-theme="light"] .section p,
+html[data-theme="light"] .hero p,
+html[data-theme="light"] footer p{
+    color:var(--muted);
+}
+html[data-theme="light"] body:after{
+    opacity:.035;
+}
+
+
+/* FINAL THEME TEXT OVERRIDE */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .hero,
+html[data-theme="dark"] .section,
+html[data-theme="dark"] .content,
+html[data-theme="dark"] footer,
+html[data-theme="dark"] .tool-card,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .contact-box{
+    color:#f5f7fa !important;
+}
+html[data-theme="dark"] .hero p,
+html[data-theme="dark"] .section p,
+html[data-theme="dark"] .content p,
+html[data-theme="dark"] footer p,
+html[data-theme="dark"] .tool-card p,
+html[data-theme="dark"] .card p{
+    color:#9ba6b5 !important;
+}
+
+html[data-theme="light"] body,
+html[data-theme="light"] .hero,
+html[data-theme="light"] .section,
+html[data-theme="light"] .content,
+html[data-theme="light"] footer,
+html[data-theme="light"] .tool-card,
+html[data-theme="light"] .card,
+html[data-theme="light"] .contact-box{
+    color:#10151b !important;
+}
+html[data-theme="light"] .hero p,
+html[data-theme="light"] .section p,
+html[data-theme="light"] .content p,
+html[data-theme="light"] footer p,
+html[data-theme="light"] .tool-card p,
+html[data-theme="light"] .card p{
+    color:#52606d !important;
+}
+
 </style>
 </head>
 
@@ -164,7 +262,11 @@ footer p{color:#687482;font-size:13px}
         <li><a href="#tools">Tools</a></li>
         <li><a href="#privacy">Privacy</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="theme-controls">
+        <button class="theme-btn" id="themeToggle" type="button" aria-label="Change theme">☾ Dark</button>
+    </div>
 </nav>
 
 <main>
@@ -306,12 +408,64 @@ footer p{color:#687482;font-size:13px}
 </div>
 </section>
 
+
+<section class="section" id="contact">
+<div class="section-inner">
+    <div class="section-label">/ CONTACT KYNEX</div>
+    <h2>Have a question?</h2>
+    <div class="contact-box">
+        <p>
+            For questions, suggestions, feedback, collaboration, or cybersecurity
+            tool ideas, contact the Kynex team by email.
+        </p>
+        <a class="contact-email" href="mailto:professionalworkfor249@gmail.com">
+            ✉️ professionalworkfor249@gmail.com
+        </a>
+    </div>
+</div>
+</section>
+
 </main>
 
 <footer>
     <div class="logo">Kyn<span>ex</span></div>
     <p>© 2026 Kynex. Free cybersecurity tools and cyber awareness.</p>
 </footer>
+
+
+<script>
+(function(){
+    const toggle = document.getElementById("themeToggle");
+    const saved = localStorage.getItem("kynex-theme");
+
+    function systemTheme(){
+        return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+
+    function applyTheme(theme){
+        document.documentElement.dataset.theme = theme;
+        toggle.textContent = theme === "light" ? "☀ Light" : "☾ Dark";
+        toggle.setAttribute(
+            "aria-label",
+            "Switch to " + (theme === "light" ? "dark" : "light") + " mode"
+        );
+    }
+
+    applyTheme(saved || systemTheme());
+
+    toggle.addEventListener("click", function(){
+        const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+        localStorage.setItem("kynex-theme", next);
+        applyTheme(next);
+    });
+
+    window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", function(event){
+        if(!localStorage.getItem("kynex-theme")){
+            applyTheme(event.matches ? "light" : "dark");
+        }
+    });
+})();
+</script>
 
 </body>
 </html>
