@@ -19,13 +19,12 @@
 
   <meta name="author" content="Kynex">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
 
   <style>
 
     /* =========================================================
-       KYNEX — BLUE THEME
+       KYNEX BLUE THEME
     ========================================================= */
 
     :root {
@@ -59,7 +58,6 @@
     ========================================================= */
 
     body.light {
-
       --bg: #ffffff;
       --bg-soft: #f6f8fa;
 
@@ -98,7 +96,6 @@
     }
 
     body {
-
       font-family:
         Inter,
         -apple-system,
@@ -131,12 +128,7 @@
     }
 
     .container {
-
-      width: min(
-        100% - 40px,
-        var(--max-width)
-      );
-
+      width: min(100% - 40px, var(--max-width));
       margin: 0 auto;
     }
 
@@ -146,10 +138,8 @@
     ========================================================= */
 
     header {
-
       position: sticky;
       top: 0;
-
       z-index: 1000;
 
       backdrop-filter: blur(16px);
@@ -165,7 +155,6 @@
     }
 
     .navbar {
-
       min-height: 72px;
 
       display: flex;
@@ -181,21 +170,16 @@
     ========================================================= */
 
     .brand {
-
       display: inline-flex;
       align-items: center;
-
       gap: 10px;
 
       font-size: 1.35rem;
-
       font-weight: 800;
-
       letter-spacing: -0.04em;
     }
 
     .brand-mark {
-
       width: 34px;
       height: 34px;
 
@@ -203,15 +187,12 @@
       place-items: center;
 
       border: 1px solid var(--blue-border);
-
       border-radius: 10px;
 
       background: var(--blue-soft);
-
       color: var(--blue);
 
       font-size: 0.82rem;
-
       font-weight: 900;
     }
 
@@ -229,19 +210,14 @@
     ========================================================= */
 
     nav {
-
       display: flex;
       align-items: center;
-
       gap: 26px;
     }
 
     nav a {
-
       color: var(--text-soft);
-
       font-size: 0.92rem;
-
       font-weight: 600;
 
       transition: color 0.2s ease;
@@ -257,11 +233,9 @@
     ========================================================= */
 
     .theme-toggle {
-
       border: 1px solid var(--border);
 
       background: var(--card);
-
       color: var(--text);
 
       border-radius: 10px;
@@ -272,7 +246,6 @@
 
       display: inline-flex;
       align-items: center;
-
       gap: 7px;
 
       transition:
@@ -281,9 +254,7 @@
     }
 
     .theme-toggle:hover {
-
       border-color: var(--blue-border);
-
       background: var(--blue-soft);
     }
 
@@ -293,7 +264,6 @@
     ========================================================= */
 
     .hero {
-
       position: relative;
 
       padding: 120px 0 105px;
@@ -302,7 +272,6 @@
     }
 
     .hero::before {
-
       content: "";
 
       position: absolute;
@@ -332,7 +301,6 @@
     ========================================================= */
 
     .eyebrow {
-
       display: inline-flex;
       align-items: center;
 
@@ -349,18 +317,15 @@
       color: var(--blue);
 
       font-size: 0.78rem;
-
       font-weight: 800;
 
       letter-spacing: 0.08em;
-
       text-transform: uppercase;
 
       margin-bottom: 24px;
     }
 
     .eyebrow-dot {
-
       width: 7px;
       height: 7px;
 
@@ -368,8 +333,7 @@
 
       background: var(--blue);
 
-      box-shadow:
-        0 0 12px var(--blue);
+      box-shadow: 0 0 12px var(--blue);
     }
 
 
@@ -378,17 +342,11 @@
     ========================================================= */
 
     .hero h1 {
-
       max-width: 850px;
 
       margin: 0 auto;
 
-      font-size:
-        clamp(
-          3rem,
-          8vw,
-          6.5rem
-        );
+      font-size: clamp(3rem, 8vw, 6.5rem);
 
       line-height: 0.98;
 
@@ -402,19 +360,13 @@
     }
 
     .hero p {
-
       max-width: 650px;
 
       margin: 28px auto 0;
 
       color: var(--text-soft);
 
-      font-size:
-        clamp(
-          1rem,
-          2vw,
-          1.15rem
-        );
+      font-size: clamp(1rem, 2vw, 1.15rem);
 
       line-height: 1.75;
     }
@@ -425,7 +377,6 @@
     ========================================================= */
 
     .hero-buttons {
-
       display: flex;
 
       justify-content: center;
@@ -439,7 +390,6 @@
     }
 
     .btn {
-
       min-height: 48px;
 
       padding: 0 20px;
@@ -454,7 +404,6 @@
       border-radius: 11px;
 
       font-size: 0.93rem;
-
       font-weight: 750;
 
       border: 1px solid var(--border);
@@ -470,7 +419,6 @@
     }
 
     .btn-primary {
-
       background: var(--blue);
 
       color: #ffffff;
@@ -479,23 +427,17 @@
     }
 
     .btn-primary:hover {
-
       background: var(--blue-dark);
-
       border-color: var(--blue-dark);
     }
 
     .btn-secondary {
-
       background: var(--card);
-
       color: var(--text);
     }
 
     .btn-secondary:hover {
-
       border-color: var(--blue-border);
-
       background: var(--blue-soft);
     }
 
@@ -505,7 +447,6 @@
     ========================================================= */
 
     .hero-trust {
-
       margin-top: 42px;
 
       display: flex;
@@ -520,16 +461,12 @@
       color: var(--text-muted);
 
       font-size: 0.82rem;
-
       font-weight: 600;
     }
 
     .hero-trust span {
-
       display: inline-flex;
-
       align-items: center;
-
       gap: 7px;
     }
 
@@ -551,28 +488,19 @@
     }
 
     .section-label {
-
       color: var(--blue);
 
       font-size: 0.75rem;
-
       font-weight: 850;
 
       letter-spacing: 0.12em;
-
       text-transform: uppercase;
 
       margin-bottom: 10px;
     }
 
     .section-heading h2 {
-
-      font-size:
-        clamp(
-          2rem,
-          4vw,
-          3.15rem
-        );
+      font-size: clamp(2rem, 4vw, 3.15rem);
 
       line-height: 1.1;
 
@@ -580,7 +508,6 @@
     }
 
     .section-heading p {
-
       max-width: 650px;
 
       margin-top: 13px;
@@ -590,28 +517,23 @@
 
 
     /* =========================================================
-       TOOLS
+       AVAILABLE TOOLS
     ========================================================= */
 
     #tools {
-
       border-top: 1px solid var(--border);
-
       border-bottom: 1px solid var(--border);
     }
 
     .tools-grid {
-
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 18px;
     }
 
     .tool-card {
-
       position: relative;
 
       padding: 28px;
@@ -631,7 +553,6 @@
     }
 
     .tool-card:hover {
-
       transform: translateY(-4px);
 
       border-color: var(--blue-border);
@@ -640,12 +561,10 @@
     }
 
     .tool-icon {
-
       width: 46px;
       height: 46px;
 
       display: grid;
-
       place-items: center;
 
       border-radius: 13px;
@@ -660,7 +579,6 @@
     }
 
     .tool-status {
-
       display: inline-flex;
 
       align-items: center;
@@ -681,7 +599,6 @@
     }
 
     .status-dot {
-
       width: 6px;
       height: 6px;
 
@@ -689,19 +606,16 @@
 
       background: var(--blue);
 
-      box-shadow:
-        0 0 8px var(--blue);
+      box-shadow: 0 0 8px var(--blue);
     }
 
     .tool-card h3 {
-
       font-size: 1.35rem;
 
       letter-spacing: -0.025em;
     }
 
     .tool-card p {
-
       margin-top: 10px;
 
       color: var(--text-soft);
@@ -714,7 +628,6 @@
     }
 
     .tool-card .btn {
-
       margin-top: 24px;
 
       width: 100%;
@@ -726,7 +639,6 @@
     ========================================================= */
 
     .browser-note {
-
       margin-top: 20px;
 
       display: flex;
@@ -762,17 +674,14 @@
     ========================================================= */
 
     .why-grid {
-
       display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       gap: 18px;
     }
 
     .why-card {
-
       padding: 27px;
 
       border: 1px solid var(--border);
@@ -783,7 +692,6 @@
     }
 
     .why-number {
-
       color: var(--blue);
 
       font-size: 0.75rem;
@@ -796,14 +704,12 @@
     }
 
     .why-card h3 {
-
       font-size: 1.15rem;
 
       margin-bottom: 9px;
     }
 
     .why-card p {
-
       color: var(--text-soft);
 
       font-size: 0.9rem;
@@ -817,7 +723,6 @@
     ========================================================= */
 
     .how-section {
-
       background: var(--bg-soft);
 
       border-top: 1px solid var(--border);
@@ -826,17 +731,14 @@
     }
 
     .steps {
-
       display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       gap: 0;
     }
 
     .step {
-
       position: relative;
 
       padding: 28px;
@@ -849,22 +751,16 @@
     }
 
     .step:first-child {
-
-      border-radius:
-        var(--radius) 0 0 var(--radius);
+      border-radius: var(--radius) 0 0 var(--radius);
     }
 
     .step:last-child {
+      border-right: 1px solid var(--border);
 
-      border-right:
-        1px solid var(--border);
-
-      border-radius:
-        0 var(--radius) var(--radius) 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
     }
 
     .step-number {
-
       width: 38px;
       height: 38px;
 
@@ -886,14 +782,12 @@
     }
 
     .step h3 {
-
       font-size: 1.05rem;
 
       margin-bottom: 8px;
     }
 
     .step p {
-
       color: var(--text-soft);
 
       font-size: 0.88rem;
@@ -905,17 +799,14 @@
     ========================================================= */
 
     .coming-list {
-
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 10px;
     }
 
     .coming-item {
-
       display: flex;
 
       align-items: center;
@@ -934,7 +825,6 @@
     }
 
     .coming-name {
-
       display: flex;
 
       align-items: center;
@@ -949,7 +839,6 @@
     }
 
     .coming-badge {
-
       flex-shrink: 0;
 
       padding: 5px 9px;
@@ -975,11 +864,9 @@
     ========================================================= */
 
     .about-box {
-
       display: grid;
 
-      grid-template-columns:
-        0.7fr 1.3fr;
+      grid-template-columns: 0.7fr 1.3fr;
 
       gap: 50px;
 
@@ -999,13 +886,7 @@
     }
 
     .about-title {
-
-      font-size:
-        clamp(
-          1.8rem,
-          4vw,
-          2.7rem
-        );
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
 
       letter-spacing: -0.045em;
 
@@ -1013,7 +894,6 @@
     }
 
     .about-text {
-
       color: var(--text-soft);
 
       font-size: 1rem;
@@ -1031,7 +911,6 @@
     }
 
     .contact-box {
-
       text-align: center;
 
       padding: 55px 30px;
@@ -1050,19 +929,12 @@
     }
 
     .contact-box h2 {
-
-      font-size:
-        clamp(
-          2rem,
-          4vw,
-          3rem
-        );
+      font-size: clamp(2rem, 4vw, 3rem);
 
       letter-spacing: -0.045em;
     }
 
     .contact-box p {
-
       max-width: 580px;
 
       margin: 13px auto 24px;
@@ -1071,7 +943,6 @@
     }
 
     .email {
-
       display: inline-flex;
 
       padding: 12px 18px;
@@ -1086,8 +957,7 @@
 
       font-weight: 750;
 
-      transition:
-        border-color 0.2s ease;
+      transition: border-color 0.2s ease;
     }
 
     .email:hover {
@@ -1095,7 +965,6 @@
     }
 
     .tool-idea {
-
       margin-top: 18px;
 
       color: var(--text-muted);
@@ -1113,14 +982,12 @@
     ========================================================= */
 
     footer {
-
       border-top: 1px solid var(--border);
 
       padding: 35px 0;
     }
 
     .footer-top {
-
       display: flex;
 
       justify-content: space-between;
@@ -1131,7 +998,6 @@
     }
 
     .footer-brand {
-
       font-size: 1.05rem;
 
       font-weight: 850;
@@ -1142,7 +1008,6 @@
     }
 
     .footer-privacy {
-
       display: flex;
 
       align-items: center;
@@ -1157,7 +1022,6 @@
     }
 
     .footer-bottom {
-
       display: flex;
 
       justify-content: space-between;
@@ -1177,7 +1041,7 @@
 
 
     /* =========================================================
-       RESPONSIVE — TABLET
+       TABLET
     ========================================================= */
 
     @media (max-width: 850px) {
@@ -1195,20 +1059,16 @@
       .steps,
       .coming-list,
       .about-box {
-
         grid-template-columns: 1fr;
       }
 
       .step {
-
-        border-right:
-          1px solid var(--border);
+        border-right: 1px solid var(--border);
 
         border-bottom: none;
       }
 
       .step:first-child {
-
         border-radius:
           var(--radius)
           var(--radius)
@@ -1217,7 +1077,6 @@
       }
 
       .step:last-child {
-
         border-radius:
           0
           0
@@ -1229,7 +1088,6 @@
       }
 
       .about-box {
-
         gap: 25px;
 
         padding: 30px;
@@ -1237,7 +1095,6 @@
 
       .footer-top,
       .footer-bottom {
-
         flex-direction: column;
 
         align-items: flex-start;
@@ -1246,13 +1103,12 @@
 
 
     /* =========================================================
-       RESPONSIVE — MOBILE
+       MOBILE
     ========================================================= */
 
     @media (max-width: 560px) {
 
       .container {
-
         width:
           min(
             100% - 28px,
@@ -1265,13 +1121,10 @@
       }
 
       .hero {
-
-        padding:
-          75px 0 65px;
+        padding: 75px 0 65px;
       }
 
       .hero h1 {
-
         font-size:
           clamp(
             2.8rem,
@@ -1285,7 +1138,6 @@
       }
 
       .hero-buttons {
-
         flex-direction: column;
 
         width: 100%;
@@ -1296,7 +1148,6 @@
       }
 
       .hero-trust {
-
         flex-direction: column;
 
         gap: 10px;
@@ -1312,7 +1163,6 @@
       }
 
       .email {
-
         max-width: 100%;
 
         overflow-wrap: anywhere;
@@ -1412,9 +1262,7 @@
   <main id="top">
 
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
+    <!-- HERO -->
 
     <section class="hero">
 
@@ -1459,9 +1307,7 @@
 
             Try Password Tools
 
-            <span>
-              →
-            </span>
+            <span>→</span>
 
           </a>
 
@@ -1483,35 +1329,20 @@
 
 
           <span>
-
-            <strong>
-              ✓
-            </strong>
-
+            <strong>✓</strong>
             No signup
-
           </span>
 
 
           <span>
-
-            <strong>
-              ✓
-            </strong>
-
+            <strong>✓</strong>
             Browser-based
-
           </span>
 
 
           <span>
-
-            <strong>
-              ✓
-            </strong>
-
+            <strong>✓</strong>
             Free to use
-
           </span>
 
 
@@ -1524,9 +1355,7 @@
 
 
 
-    <!-- =====================================================
-         AVAILABLE TOOLS
-    ====================================================== -->
+    <!-- AVAILABLE TOOLS -->
 
     <section id="tools">
 
@@ -1593,18 +1422,16 @@
             </p>
 
 
-            <!-- CHANGE THIS LINK IF YOUR FILE HAS A DIFFERENT NAME -->
+            <!-- CORRECT PATH -->
 
             <a
-              href="password-checker.html"
+              href="password-checker/index.html"
               class="btn btn-primary"
             >
 
               Open Tool
 
-              <span>
-                →
-              </span>
+              <span>→</span>
 
             </a>
 
@@ -1646,18 +1473,16 @@
             </p>
 
 
-            <!-- CHANGE THIS LINK IF YOUR FILE HAS A DIFFERENT NAME -->
+            <!-- CORRECT PATH -->
 
             <a
-              href="password-generator.html"
+              href="password-generator/index.html"
               class="btn btn-primary"
             >
 
               Open Tool
 
-              <span>
-                →
-              </span>
+              <span>→</span>
 
             </a>
 
@@ -1692,9 +1517,7 @@
 
 
 
-    <!-- =====================================================
-         WHY KYNEX
-    ====================================================== -->
+    <!-- WHY KYNEX -->
 
     <section id="why-kynex">
 
@@ -1813,9 +1636,7 @@
 
 
 
-    <!-- =====================================================
-         HOW IT WORKS
-    ====================================================== -->
+    <!-- HOW IT WORKS -->
 
     <section class="how-section">
 
@@ -1924,9 +1745,7 @@
 
 
 
-    <!-- =====================================================
-         COMING SOON
-    ====================================================== -->
+    <!-- COMING SOON -->
 
     <section>
 
@@ -2057,9 +1876,7 @@
 
 
 
-    <!-- =====================================================
-         ABOUT KYNEX
-    ====================================================== -->
+    <!-- ABOUT -->
 
     <section id="about">
 
@@ -2108,9 +1925,7 @@
 
 
 
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
+    <!-- CONTACT -->
 
     <section
       id="contact"
@@ -2188,9 +2003,7 @@
 
         <div class="footer-brand">
 
-          <span>
-            Kyn
-          </span>ex
+          <span>Kyn</span>ex
 
         </div>
 
@@ -2236,7 +2049,7 @@
 
   <!-- =======================================================
        DARK / LIGHT MODE
-    ======================================================== -->
+  ======================================================== -->
 
   <script>
 
