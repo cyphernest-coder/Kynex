@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,14 +18,10 @@
 
   <meta name="author" content="Kynex">
 
-  <link rel="icon" type="image/png" href="logo.png">
+  <!-- Kynex favicon -->
+  <link rel="icon" type="image/png" href="kynex-logo.png">
 
   <style>
-
-    /* =========================================================
-       KYNEX BLUE THEME
-    ========================================================= */
-
     :root {
       --bg: #030507;
       --bg-soft: #080b0f;
@@ -52,11 +47,6 @@
       --max-width: 1180px;
     }
 
-
-    /* =========================================================
-       LIGHT MODE
-    ========================================================= */
-
     body.light {
       --bg: #ffffff;
       --bg-soft: #f6f8fa;
@@ -79,11 +69,6 @@
 
       --shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
     }
-
-
-    /* =========================================================
-       GLOBAL
-    ========================================================= */
 
     * {
       box-sizing: border-box;
@@ -110,12 +95,11 @@
       color: var(--text);
 
       line-height: 1.6;
+      overflow-x: hidden;
 
       transition:
         background 0.25s ease,
         color 0.25s ease;
-
-      overflow-x: hidden;
     }
 
     a {
@@ -132,10 +116,7 @@
       margin: 0 auto;
     }
 
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
+    /* ================= HEADER ================= */
 
     header {
       position: sticky;
@@ -163,11 +144,6 @@
 
       gap: 24px;
     }
-
-
-    /* =========================================================
-       BRAND
-    ========================================================= */
 
     .brand {
       display: inline-flex;
@@ -204,11 +180,6 @@
       color: var(--blue);
     }
 
-
-    /* =========================================================
-       NAVIGATION
-    ========================================================= */
-
     nav {
       display: flex;
       align-items: center;
@@ -227,10 +198,7 @@
       color: var(--blue);
     }
 
-
-    /* =========================================================
-       THEME TOGGLE
-    ========================================================= */
+    /* ================= THEME BUTTON ================= */
 
     .theme-toggle {
       border: 1px solid var(--border);
@@ -258,10 +226,7 @@
       background: var(--blue-soft);
     }
 
-
-    /* =========================================================
-       HERO
-    ========================================================= */
+    /* ================= HERO ================= */
 
     .hero {
       position: relative;
@@ -294,11 +259,6 @@
 
       pointer-events: none;
     }
-
-
-    /* =========================================================
-       EYEBROW
-    ========================================================= */
 
     .eyebrow {
       display: inline-flex;
@@ -336,11 +296,6 @@
       box-shadow: 0 0 12px var(--blue);
     }
 
-
-    /* =========================================================
-       HERO TITLE
-    ========================================================= */
-
     .hero h1 {
       max-width: 850px;
 
@@ -371,10 +326,7 @@
       line-height: 1.75;
     }
 
-
-    /* =========================================================
-       BUTTONS
-    ========================================================= */
+    /* ================= BUTTONS ================= */
 
     .hero-buttons {
       display: flex;
@@ -441,11 +393,6 @@
       background: var(--blue-soft);
     }
 
-
-    /* =========================================================
-       HERO TRUST
-    ========================================================= */
-
     .hero-trust {
       margin-top: 42px;
 
@@ -474,10 +421,7 @@
       color: var(--blue);
     }
 
-
-    /* =========================================================
-       SECTIONS
-    ========================================================= */
+    /* ================= SECTIONS ================= */
 
     section {
       padding: 92px 0;
@@ -515,10 +459,7 @@
       color: var(--text-soft);
     }
 
-
-    /* =========================================================
-       AVAILABLE TOOLS
-    ========================================================= */
+    /* ================= TOOLS ================= */
 
     #tools {
       border-top: 1px solid var(--border);
@@ -633,10 +574,7 @@
       width: 100%;
     }
 
-
-    /* =========================================================
-       BROWSER PRIVACY NOTICE
-    ========================================================= */
+    /* ================= PRIVACY ================= */
 
     .browser-note {
       margin-top: 20px;
@@ -668,10 +606,7 @@
       color: var(--blue);
     }
 
-
-    /* =========================================================
-       WHY KYNEX
-    ========================================================= */
+    /* ================= WHY ================= */
 
     .why-grid {
       display: grid;
@@ -717,10 +652,7 @@
       line-height: 1.7;
     }
 
-
-    /* =========================================================
-       HOW IT WORKS
-    ========================================================= */
+    /* ================= HOW ================= */
 
     .how-section {
       background: var(--bg-soft);
@@ -793,10 +725,7 @@
       font-size: 0.88rem;
     }
 
-
-    /* =========================================================
-       COMING SOON
-    ========================================================= */
+    /* ================= COMING SOON ================= */
 
     .coming-list {
       display: grid;
@@ -858,10 +787,7 @@
       letter-spacing: 0.06em;
     }
 
-
-    /* =========================================================
-       ABOUT
-    ========================================================= */
+    /* ================= ABOUT ================= */
 
     .about-box {
       display: grid;
@@ -901,10 +827,7 @@
       line-height: 1.85;
     }
 
-
-    /* =========================================================
-       CONTACT
-    ========================================================= */
+    /* ================= CONTACT ================= */
 
     .contact-section {
       padding-bottom: 105px;
@@ -976,10 +899,7 @@
       color: var(--text);
     }
 
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
+    /* ================= FOOTER ================= */
 
     footer {
       border-top: 1px solid var(--border);
@@ -1039,10 +959,7 @@
       font-size: 0.78rem;
     }
 
-
-    /* =========================================================
-       TABLET
-    ========================================================= */
+    /* ================= TABLET ================= */
 
     @media (max-width: 850px) {
 
@@ -1064,7 +981,6 @@
 
       .step {
         border-right: 1px solid var(--border);
-
         border-bottom: none;
       }
 
@@ -1101,10 +1017,7 @@
       }
     }
 
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
+    /* ================= MOBILE ================= */
 
     @media (max-width: 560px) {
 
@@ -1168,22 +1081,16 @@
         overflow-wrap: anywhere;
       }
     }
-
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- =======================================================
-       HEADER
-  ======================================================== -->
+  <!-- HEADER -->
 
   <header>
 
     <div class="container navbar">
-
 
       <a
         href="#top"
@@ -1197,39 +1104,23 @@
 
         <div class="brand-name">
 
-          <span class="kyn">
-            Kyn
-          </span>
-
-          <span class="ex">
-            ex
-          </span>
+          <span class="kyn">Kyn</span><span class="ex">ex</span>
 
         </div>
 
       </a>
 
-
       <nav aria-label="Main navigation">
 
-        <a href="#tools">
-          Tools
-        </a>
+        <a href="#tools">Tools</a>
 
-        <a href="#why-kynex">
-          Why Kynex
-        </a>
+        <a href="#why-kynex">Why Kynex</a>
 
-        <a href="#about">
-          About
-        </a>
+        <a href="#about">About</a>
 
-        <a href="#contact">
-          Contact
-        </a>
+        <a href="#contact">Contact</a>
 
       </nav>
-
 
       <button
         class="theme-toggle"
@@ -1238,36 +1129,26 @@
         aria-label="Toggle dark and light mode"
       >
 
-        <span id="themeIcon">
-          ☾
-        </span>
+        <span id="themeIcon">☾</span>
 
-        <span id="themeText">
-          Dark
-        </span>
+        <span id="themeText">Dark</span>
 
       </button>
-
 
     </div>
 
   </header>
 
 
-
-  <!-- =======================================================
-       MAIN
-  ======================================================== -->
+  <!-- MAIN -->
 
   <main id="top">
-
 
     <!-- HERO -->
 
     <section class="hero">
 
       <div class="container">
-
 
         <div class="eyebrow">
 
@@ -1277,17 +1158,13 @@
 
         </div>
 
-
         <h1>
 
           Security tools.<br>
 
-          <span>
-            Made simpler.
-          </span>
+          <span>Made simpler.</span>
 
         </h1>
-
 
         <p>
 
@@ -1296,9 +1173,7 @@
 
         </p>
 
-
         <div class="hero-buttons">
-
 
           <a
             href="#tools"
@@ -1311,7 +1186,6 @@
 
           </a>
 
-
           <a
             href="#tools"
             class="btn btn-secondary"
@@ -1321,38 +1195,30 @@
 
           </a>
 
-
         </div>
 
-
         <div class="hero-trust">
-
 
           <span>
             <strong>✓</strong>
             No signup
           </span>
 
-
           <span>
             <strong>✓</strong>
             Browser-based
           </span>
-
 
           <span>
             <strong>✓</strong>
             Free to use
           </span>
 
-
         </div>
-
 
       </div>
 
     </section>
-
 
 
     <!-- AVAILABLE TOOLS -->
@@ -1361,19 +1227,15 @@
 
       <div class="container">
 
-
         <div class="section-heading">
-
 
           <div class="section-label">
             Kynex tools
           </div>
 
-
           <h2>
             Available tools
           </h2>
-
 
           <p>
 
@@ -1382,22 +1244,17 @@
 
           </p>
 
-
         </div>
 
-
         <div class="tools-grid">
-
 
           <!-- PASSWORD STRENGTH CHECKER -->
 
           <article class="tool-card">
 
-
             <div class="tool-icon">
               🔐
             </div>
-
 
             <div class="tool-status">
 
@@ -1407,11 +1264,9 @@
 
             </div>
 
-
             <h3>
               Password Strength Checker
             </h3>
-
 
             <p>
 
@@ -1421,11 +1276,9 @@
 
             </p>
 
-
-            <!-- CORRECT PATH -->
-
+            <!-- CORRECT LINK -->
             <a
-              href="password-checker/index.html"
+              href="password-strength-checker/index.html"
               class="btn btn-primary"
             >
 
@@ -1435,20 +1288,16 @@
 
             </a>
 
-
           </article>
-
 
 
           <!-- PASSWORD GENERATOR -->
 
           <article class="tool-card">
 
-
             <div class="tool-icon">
               🔑
             </div>
-
 
             <div class="tool-status">
 
@@ -1458,11 +1307,9 @@
 
             </div>
 
-
             <h3>
               Password Generator
             </h3>
-
 
             <p>
 
@@ -1472,9 +1319,7 @@
 
             </p>
 
-
-            <!-- CORRECT PATH -->
-
+            <!-- CORRECT LINK -->
             <a
               href="password-generator/index.html"
               class="btn btn-primary"
@@ -1486,12 +1331,9 @@
 
             </a>
 
-
           </article>
 
-
         </div>
-
 
         <div class="browser-note">
 
@@ -1499,9 +1341,7 @@
 
           <span>
 
-            <strong>
-              100% in your browser.
-            </strong>
+            <strong>100% in your browser.</strong>
 
             Your password is processed locally and is
             not sent to a Kynex server.
@@ -1510,11 +1350,9 @@
 
         </div>
 
-
       </div>
 
     </section>
-
 
 
     <!-- WHY KYNEX -->
@@ -1523,19 +1361,15 @@
 
       <div class="container">
 
-
         <div class="section-heading">
-
 
           <div class="section-label">
             Our approach
           </div>
 
-
           <h2>
             Why Kynex?
           </h2>
-
 
           <p>
 
@@ -1544,25 +1378,19 @@
 
           </p>
 
-
         </div>
-
 
         <div class="why-grid">
 
-
           <article class="why-card">
-
 
             <div class="why-number">
               01 / PRIVACY
             </div>
 
-
             <h3>
               Privacy-first
             </h3>
-
 
             <p>
 
@@ -1572,23 +1400,17 @@
 
             </p>
 
-
           </article>
 
-
-
           <article class="why-card">
-
 
             <div class="why-number">
               02 / ACCESS
             </div>
 
-
             <h3>
               Free forever
             </h3>
-
 
             <p>
 
@@ -1597,23 +1419,17 @@
 
             </p>
 
-
           </article>
 
-
-
           <article class="why-card">
-
 
             <div class="why-number">
               03 / CLARITY
             </div>
 
-
             <h3>
               Simple explanations
             </h3>
-
 
             <p>
 
@@ -1623,17 +1439,13 @@
 
             </p>
 
-
           </article>
 
-
         </div>
-
 
       </div>
 
     </section>
-
 
 
     <!-- HOW IT WORKS -->
@@ -1642,38 +1454,29 @@
 
       <div class="container">
 
-
         <div class="section-heading">
-
 
           <div class="section-label">
             Simple by design
           </div>
 
-
           <h2>
             How it works
           </h2>
 
-
         </div>
-
 
         <div class="steps">
 
-
           <article class="step">
-
 
             <div class="step-number">
               1
             </div>
 
-
             <h3>
               Open a tool
             </h3>
-
 
             <p>
 
@@ -1682,23 +1485,17 @@
 
             </p>
 
-
           </article>
 
-
-
           <article class="step">
-
 
             <div class="step-number">
               2
             </div>
 
-
             <h3>
               Everything stays in your browser
             </h3>
-
 
             <p>
 
@@ -1707,23 +1504,17 @@
 
             </p>
 
-
           </article>
 
-
-
           <article class="step">
-
 
             <div class="step-number">
               3
             </div>
 
-
             <h3>
               Get clear results
             </h3>
-
 
             <p>
 
@@ -1732,17 +1523,13 @@
 
             </p>
 
-
           </article>
 
-
         </div>
-
 
       </div>
 
     </section>
-
 
 
     <!-- COMING SOON -->
@@ -1751,129 +1538,93 @@
 
       <div class="container">
 
-
         <div class="section-heading">
-
 
           <div class="section-label">
             In development
           </div>
 
-
           <h2>
             Coming Soon
           </h2>
-
 
           <p>
             More practical cybersecurity tools are on the way.
           </p>
 
-
         </div>
-
 
         <div class="coming-list">
 
-
           <div class="coming-item">
-
 
             <div class="coming-name">
 
-              <span class="coming-icon">
-                🧩
-              </span>
+              <span class="coming-icon">🧩</span>
 
               Passphrase Generator
 
             </div>
 
-
             <span class="coming-badge">
               Coming Soon
             </span>
 
-
           </div>
-
-
 
           <div class="coming-item">
 
-
             <div class="coming-name">
 
-              <span class="coming-icon">
-                #️⃣
-              </span>
+              <span class="coming-icon">#️⃣</span>
 
               Hash Generator
 
             </div>
 
-
             <span class="coming-badge">
               Coming Soon
             </span>
 
-
           </div>
-
-
 
           <div class="coming-item">
 
-
             <div class="coming-name">
 
-              <span class="coming-icon">
-                🌐
-              </span>
+              <span class="coming-icon">🌐</span>
 
               URL Security Analyzer
 
             </div>
 
-
             <span class="coming-badge">
               Coming Soon
             </span>
 
-
           </div>
-
-
 
           <div class="coming-item">
 
-
             <div class="coming-name">
 
-              <span class="coming-icon">
-                🛡️
-              </span>
+              <span class="coming-icon">🛡️</span>
 
               Security Header Checker
 
             </div>
 
-
             <span class="coming-badge">
               Coming Soon
             </span>
 
-
           </div>
 
-
         </div>
-
 
       </div>
 
     </section>
-
 
 
     <!-- ABOUT -->
@@ -1882,17 +1633,13 @@
 
       <div class="container">
 
-
         <div class="about-box">
 
-
           <div>
-
 
             <div class="section-label">
               About Kynex
             </div>
-
 
             <h2 class="about-title">
 
@@ -1901,9 +1648,7 @@
 
             </h2>
 
-
           </div>
-
 
           <p class="about-text">
 
@@ -1915,14 +1660,11 @@
 
           </p>
 
-
         </div>
-
 
       </div>
 
     </section>
-
 
 
     <!-- CONTACT -->
@@ -1934,19 +1676,15 @@
 
       <div class="container">
 
-
         <div class="contact-box">
-
 
           <div class="section-label">
             Contact Kynex
           </div>
 
-
           <h2>
             Have a question?
           </h2>
-
 
           <p>
 
@@ -1954,7 +1692,6 @@
             for future cybersecurity tools are welcome.
 
           </p>
-
 
           <a
             href="mailto:professionalworkfor249@gmail.com"
@@ -1964,7 +1701,6 @@
             professionalworkfor249@gmail.com
 
           </a>
-
 
           <div class="tool-idea">
 
@@ -1976,37 +1712,28 @@
 
           </div>
 
-
         </div>
-
 
       </div>
 
     </section>
 
-
   </main>
 
 
-
-  <!-- =======================================================
-       FOOTER
-  ======================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
     <div class="container">
 
-
       <div class="footer-top">
-
 
         <div class="footer-brand">
 
           <span>Kyn</span>ex
 
         </div>
-
 
         <div class="footer-privacy">
 
@@ -2016,12 +1743,9 @@
 
         </div>
 
-
       </div>
 
-
       <div class="footer-bottom">
-
 
         <span>
 
@@ -2030,26 +1754,20 @@
 
         </span>
 
-
         <span>
 
           No signup · No data collection
 
         </span>
 
-
       </div>
-
 
     </div>
 
   </footer>
 
 
-
-  <!-- =======================================================
-       DARK / LIGHT MODE
-  ======================================================== -->
+  <!-- DARK / LIGHT MODE -->
 
   <script>
 
@@ -2067,7 +1785,6 @@
 
       const isLight =
         document.body.classList.contains("light");
-
 
       if (isLight) {
 
@@ -2091,13 +1808,11 @@
       const savedTheme =
         localStorage.getItem("kynex-theme");
 
-
       if (savedTheme === "light") {
 
         document.body.classList.add("light");
 
       }
-
 
       updateThemeButton();
 
@@ -2110,18 +1825,13 @@
 
         document.body.classList.toggle("light");
 
-
         const isLight =
           document.body.classList.contains("light");
 
-
         localStorage.setItem(
           "kynex-theme",
-          isLight
-            ? "light"
-            : "dark"
+          isLight ? "light" : "dark"
         );
-
 
         updateThemeButton();
 
@@ -2133,7 +1843,5 @@
 
   </script>
 
-
 </body>
 </html>
-```
